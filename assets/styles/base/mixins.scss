@@ -1,0 +1,37 @@
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$tablet-max + 1}) {
+    @content;
+  }
+}
+
+@mixin biggerDesktop {
+  @media screen and (min-width: $biggerDesktop-width) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  ::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
