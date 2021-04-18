@@ -21,3 +21,9 @@ npm run dev
 ```
 
 :sparkles:
+
+### See at:
+
+```
+localhost/3000
+```

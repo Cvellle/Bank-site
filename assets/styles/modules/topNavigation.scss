@@ -1,0 +1,106 @@
+@import "../base/functions.scss";
+
+.topNavigation {
+  $this: &;
+
+  //PADDING VARS
+  $paddTop: 43;
+  $paddRight: ($basePadding + (413 - $basePadding));
+  $paddBottom: 41;
+  $paddLeft: ($basePadding + (403 - $basePadding));
+
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  height: (36vw / 3.8);
+
+  @include desktop {
+  }
+
+  &__contenWrapper {
+    display: flex;
+    flex: 100%;
+
+    @include desktop {
+      align-items: center;
+      color: #ffffff;
+      font-style: normal;
+      font-size: (14vw / 19.2) * 1.4;
+      font-weight: 400;
+      justify-content: flex-end;
+      height: (15vw / 19.2) * 1.4;
+      line-height: (15vw / 19.2) * 1.4;
+      height: (15vw / 19.2) * 1.4;
+    }
+
+    #{$this}__support {
+      display: flex;
+      flex: 0 0 50%;
+      justify-content: flex-start;
+      color: #9f9f9f;
+      display: flex;
+      align-items: center;
+      font-size: vwm(12);
+      padding-left: vwm(16);
+
+      figure {
+        display: flex;
+        align-items: center;
+        width: vwm(17);
+
+        embed {
+          opacity: 0.5;
+        }
+      }
+
+      a {
+        padding-left: vwm(12);
+      }
+    }
+
+    #{$this}__eBanking {
+      height: vwm(36);
+      display: flex;
+      flex: 0 0 50%;
+      justify-content: flex-end;
+      align-items: center;
+
+      #{$this}__eBankingBtnText {
+        display: none;
+
+        @include desktop {
+          display: inline;
+        }
+      }
+
+      #{$this}__eBankingText {
+        display: inline;
+        font-size: vwm(11);
+        color: #7e8083;
+        padding-right: vwm(12);
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      #{$this}__eBankingImgWrapper {
+        width: vwm(53);
+        height: vwm(36);
+        background-color: #e60028;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > * {
+          width: vwm(20);
+          height: vwm(20);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

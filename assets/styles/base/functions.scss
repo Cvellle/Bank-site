@@ -1,0 +1,17 @@
+@function rem($length, $fontSize: 16) {
+  $result: 1;
+  $result: ($length / $fontSize) * 1rem;
+  @return $result;
+}
+
+@function vwm($length, $fontSize: 3.8) {
+  $result: 1;
+  $result: ($length / $fontSize) * 1vw;
+  @return $result;
+}
+
+@function vw($length, $fontSize: 14.37) {
+  $result: 1;
+  $result: ($length / $fontSize) * 1vw;
+  @return $result;
+}
