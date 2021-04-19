@@ -5,34 +5,46 @@
   flex-wrap: wrap;
   flex: 0 0 100%;
   justify-content: center;
-
-  @include tablet {
-    justify-content: space-between;
-  }
+  padding: vwm(50) vwm(40) vwm(50) vwm(40);
+  background: #000000;
 
   @include desktop {
+    padding: vw(154) vw(0) vw(125) vw(0);
   }
 
   &__imgWrapper {
-    align-content: flex-start;
-    display: flex;
-    flex: 0 0 (147vw / 3.75);
-    flex-wrap: wrap;
-
-    & img {
-      min-width: 100%;
-    }
-
-    @include tablet {
-      flex: 0 0 47%;
-      order: 1;
-      margin-top: (53vw / 7.68);
-    }
+    position: relative;
+    margin-top: vwm(46);
+    z-index: 0;
+    cursor: pointer;
 
     @include desktop {
-      flex: 0 0 20rem;
-      order: 1;
       margin-top: unset;
+      width: vw(722);
+      height: vw(435);
+    }
+
+    & video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/icons/General/play.svg");
+      opacity: 0.4;
+      background-size: 20%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      z-index: 12;
     }
   }
 
@@ -42,122 +54,51 @@
     flex-wrap: wrap;
     flex: 0 0 100%;
     justify-content: center;
-
-    @include tablet {
-      font-size: 0.78vw;
-      flex: 0 0 47%;
-      justify-content: unset;
-      order: 1;
-    }
+    font-size: vwm(14);
 
     @include desktop {
-      font-size: 0.78vw;
+      font-size: vwm(14);
       flex: 0 0 20rem * 1.3;
       justify-content: unset;
       order: 1;
+      margin-left: vw(56);
     }
 
-    @include biggerDesktop {
-      flex: 0 0 20rem;
-    }
+    & h2 {
+      color: #ffffff;
 
-    #{$this}__titlesGroup {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      & h2 {
-        margin-top: (19vw / 3.75);
-        font-size: (22vw / 3.75);
-        text-align: center;
-        order: 2;
-        width: (168vw / 3.75);
-
-        @include tablet {
-          font-size: (49vw / 19.2); // fits
-          height: (39vw / 7.68) * 0.7;
-          line-height: (39vw / 7.68) * 0.7;
-          font-weight: 700;
-          margin-top: (30% / 4.09);
-          text-align: unset;
-          width: 100%;
-        }
-
-        @include desktop {
-          font-size: (50vw / 19.2); // fits
-          height: (39vw / 19.2);
-          line-height: (39vw / 19.2);
-          font-weight: 700;
-          justify-content: unset;
-          margin-top: (30% / 4.09);
-          text-align: unset;
-          width: 100%;
-        }
-
-        span {
-          color: #f26522;
-        }
+      @include desktop {
+        margin-top: vw(58);
+        text-align: unset;
+        width: 100%;
+        font-size: vw(32);
+        color: #e6e6e6;
+        font-weight: 500;
+        height: vw(69);
       }
 
-      & h3 {
-        margin-top: (33vw / 3.75);
-        font-size: (14vw / 3.75); // fits
-        text-align: center;
-        width: (255vw / 3.75);
-        order: 1;
-
-        @include tablet {
-          font-size: (20.8vw / 7.68) * 0.7;
-          height: (16vw / 7.68) * 0.7;
-          line-height: (16vw / 7.68) * 0.7;
-          font-weight: 700;
-          margin-top: (33vw / 7.68) * 0.7;
-          text-align: unset;
-          width: 100%;
-        }
-
-        @include desktop {
-          font-size: (20.8vw / 19.2);
-          height: (16vw / 19.2);
-          line-height: (16vw / 19.2);
-          font-weight: 700;
-          margin-top: (65% / 4.09);
-          margin-left: (3% / 4.09);
-          text-align: unset;
-          width: 100%;
-        }
+      span {
+        color: #f26522;
       }
     }
 
     #{$this}__bodyText {
-      font-size: (12vw / 3.75);
-      line-height: (92vw / 6 / 3.75);
+      font-size: vwm(14.5);
       font-weight: 400;
       margin-top: (27vw / 3.75);
-      text-align: center;
+      text-align: left;
       width: 100%;
-
-      @include tablet {
-        font-size: (15vw / 7.68) * 1.05;
-        line-height: (216vw / 7.68 / 9) * 1.05;
-        font-weight: 400;
-        margin-top: (15vw / 7.68);
-        text-align: unset;
-      }
+      color: #f1f8ff;
 
       @include desktop {
-        font-size: (15vw / 19.2) * 1.2;
-        line-height: (216vw / 19.2 / 9) * 1.2;
-        font-weight: 400;
-        margin-top: (56% / 4.09) / 1.4;
-        margin-left: (3% / 4.09);
+        display: flex;
         text-align: unset;
-      }
-
-      @include biggerDesktop {
-        font-size: (15vw / 19.2);
-        line-height: (216vw / 19.2 / 9);
-        margin-top: (56% / 4.09);
+        margin-top: vw(24);
+        font-size: vw(16);
+        color: #e6e6e6;
+        height: vw(134);
+        align-content: center;
+        line-height: vw(24);
       }
 
       & span {
@@ -171,36 +112,39 @@
 
     #{$this}__btn {
       cursor: pointer;
-      color: #414042;
+      color: #e60028;
       font-size: (16vw / 3.75);
       margin-top: (36vw / 3.75);
-
-      @include tablet {
-        font-size: (20.5vw / 7.68) * 0.7;
-        font-weight: 700;
-        height: (18% / 4.532);
-        margin-top: (40% / 4.09);
-        transition: 0.5s;
-        width: auto;
-      }
+      margin-right: auto;
 
       @include desktop {
-        font-size: (20.5vw / 19.2);
-        font-weight: 700;
-        font-family: "Open Sans", sans-serif;
-        height: (18% / 4.532);
-        margin-top: (40% / 4.09);
-        transition: 0.5s;
-        width: (134% / 4.09);
-        padding: (3vw / 19.2);
+        margin-top: vw(30);
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        font-size: vw(16);
+        font-weight: 500;
+        align-content: center;
       }
 
       &:hover {
         color: rgb(177, 174, 174);
         transition: 0.5s;
+      }
+
+      #{$this}__imgDiv {
+        width: vwm(20);
+        height: vwm(10);
+        background: url("../images/icons/General/redArrow.svg");
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include desktop {
+          width: vw(14);
+          height: vw(11);
+          margin-left: vw(11);
+        }
       }
     }
   }

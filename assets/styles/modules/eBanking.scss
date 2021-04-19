@@ -1,17 +1,11 @@
 .eBanking {
   $this: &;
 
-  padding: 20rem;
   background-color: #f6d3c3;
   display: flex;
   flex-wrap: wrap;
   margin-top: (81vw / 3.75);
   overflow-x: hidden;
-
-  @include tablet {
-    justify-content: center;
-    margin-top: (132.3vw / 7.68);
-  }
 
   @include desktop {
     justify-content: space-between;
@@ -24,13 +18,10 @@
     position: relative;
     flex: 0 0 100%;
 
-    @include tablet {
-      flex: 0 0 55%;
-    }
-
     @include desktop {
-      flex: 0 0 20rem;
+      flex: 0 0 10%;
       order: 2;
+      max-width: 10%;
     }
 
     &::before {
@@ -140,7 +131,7 @@
       z-index: 2;
 
       #{$this}__sliderBtn {
-        // background: url("../images/Ellipse-inactive.png");
+        background: url("../images/icons/Ebanking/grays.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         cursor: pointer;
@@ -164,7 +155,7 @@
         }
 
         &--activeBtn {
-          //   background: url("../images/Ellipse-active.png");
+          background: url("../images/icons/Ebanking/sl.svg");
           background-size: 100% 100%;
           background-repeat: no-repeat;
         }
@@ -199,14 +190,14 @@
       }
 
       &--left {
-        // background: url("../images/left-arrow.png");
+        background: url("../images/icons/Ebanking/Levo.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         left: 0;
       }
 
       &--right {
-        // background: url("../images/right-arrow.png");
+        background: url("../images/icons/Ebanking/Desno.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         right: 0;
@@ -219,15 +210,9 @@
     flex-wrap: wrap;
     flex: 0 0 80%;
 
-    @include tablet {
-      align-content: flex-start;
-      flex: 0 0 100%;
-      justify-content: center;
-    }
-
     @include desktop {
       justify-content: unset;
-      flex: 0 0 20rem;
+      flex: 0 0 20vw;
     }
 
     & h1 {

@@ -1,14 +1,13 @@
 .special {
   $this: &;
+  $contentWidth: 1437 - 59 - 46;
+  position: relative;
+  z-index: 25;
 
   display: flex;
   flex-wrap: wrap;
   flex: 0 0 100%;
   justify-content: center;
-
-  @include tablet {
-    align-content: flex-start;
-  }
 
   @include desktop {
   }
@@ -28,15 +27,6 @@
       flex: 0 0 (190vw / 3.75);
       font-size: (21.2vw / 3.75);
       max-width: (190w / 3.75);
-
-      @include tablet {
-        font-size: (51.5vw / 7.68) * 0.7;
-        font-weight: 700;
-        height: (5vw * 2);
-        margin-top: unset;
-        line-height: 5vw;
-        justify-content: center;
-      }
 
       @include desktop {
         font-size: (51.5vw / 19.2);
@@ -72,11 +62,6 @@
       min-width: 100%;
       word-break: keep-all;
 
-      @include tablet {
-        font-size: (11vw / 7.68) * 2;
-        justify-content: center;
-      }
-
       span {
         max-width: 70vw;
         text-align: center;
@@ -97,12 +82,6 @@
         justify-content: center;
         text-align: center;
       }
-
-      @include biggerDesktop {
-        font-size: (17vw / 19.2);
-        height: (49vw / 19.2);
-        line-height: ((49vw / 2) / 19.2);
-      }
     }
 
     #{$this}__hideOnMob {
@@ -122,196 +101,306 @@
 
   &__article {
     display: flex;
-    flex: 1 0 100%;
     flex-wrap: wrap;
-    justify-content: center;
-
-    @include tablet {
-      flex: 0 0 33%;
-    }
+    justify-content: flex-start;
+    width: 80%;
+    border: 1px solid lightgray;
 
     @include desktop {
       font-size: 0.78vw;
       flex: 0 0 33%;
+      width: vw(482);
+      height: vw(548);
     }
 
     &--1 {
-      margin-top: (37vw / 3.75);
-
-      @include tablet {
-        margin-top: (37vw / 6.78);
-      }
+      margin-top: vwm(-80);
 
       @include desktop {
-        margin-top: 3.177vw;
+        margin-top: vw(-112);
+        margin-right: vw(49 / 2);
+      }
+
+      #{$this}__first {
+        padding: vwm(6) vwm(20) vwm(50) vwm(26);
+
+        @include desktop {
+          height: vw(293);
+          padding: vw(0) vw(60) 0 vw(60);
+        }
+
+        & h4 {
+          font-size: 4vw;
+          font-weight: 700;
+          text-align: left;
+          margin-top: (17vw / 3.75);
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+
+          @include desktop {
+            font-size: vw(21);
+            line-height: vw(26);
+            color: #000000;
+            font-weight: 500;
+            max-width: unset;
+            margin-top: vw(57);
+            max-width: vw(344);
+            height: vw(21);
+          }
+        }
+
+        p {
+          margin-top: (18vw / 3.75);
+
+          @include desktop {
+            margin-top: vw(22);
+          }
+        }
+
+        #{$this}__btn {
+          cursor: pointer;
+          margin-top: vwm(29);
+          display: block;
+          color: #e60028;
+          display: flex;
+          align-items: center;
+
+          @include desktop {
+            position: absolute;
+            font-size: vw(16);
+            line-height: vw(24);
+            color: #e60028;
+            font-weight: 500;
+            margin-top: vw(63);
+          }
+
+          #{$this}__btnImg {
+            background: url("../images/icons/General/redArrow.svg");
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: vwm(15);
+            width: vwm(15);
+            margin-left: 2vw;
+
+            @include desktop {
+              height: vw(14);
+              width: vw(14);
+            }
+          }
+        }
+      }
+
+      #{$this}__meeting {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid lightgray;
+
+        @include desktop {
+          height: vw(255);
+        }
+        & p {
+          flex: 0 100%;
+          font-size: vwm(12);
+          font-weight: 400;
+          margin-top: vwm(51);
+          text-align: center;
+          max-width: vwm(194);
+
+          @include desktop {
+            margin-top: vw(55);
+            max-width: vw(313);
+            height: vw(36);
+            font-size: vw(13);
+            color: #686b6e;
+          }
+        }
+
+        & button {
+          width: vwm(197);
+          height: vwm(48);
+          background: #e60028;
+          color: #ffffff;
+          font-size: vwm(14);
+          margin-top: vwm(24);
+          margin-bottom: vwm(54);
+
+          @include desktop {
+            margin-top: vw(69);
+            height: vw(54);
+            width: vw(223);
+            font-size: vw(16);
+            letter-spacing: vw(0);
+            color: #ffffff;
+            font-weight: 500;
+          }
+        }
       }
     }
 
     &--2 {
       margin-top: (40vw / 3.75);
 
-      @include tablet {
-        margin-top: (37vw / 6.78);
-      }
-
       @include desktop {
-        margin-top: 3.177vw;
-      }
-    }
-
-    &--3 {
-      margin-top: (38vw / 3.75);
-
-      @include tablet {
-        margin-top: (37vw / 6.78);
+        margin-top: vw(-112);
+        margin-left: vw(49 / 2);
       }
 
-      @include desktop {
-        margin-top: 3.177vw;
-      }
-    }
+      #{$this}__first {
+        padding: vwm(6) vwm(20) vwm(50) vwm(26);
 
-    #{$this}__imageWrapper {
-      position: relative;
-      height: (49vw / 3.75);
-      width: (49vw / 3.75);
-
-      @include desktop {
-        margin-top: 3.177vw;
-        height: 4.63vw;
-        width: 4.63vw;
-      }
-
-      img {
-        position: relative;
-        z-index: 1;
-        min-width: 100%;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: 0;
-      }
-
-      &--audience {
         @include desktop {
+          height: vw(293);
+          padding: vw(0) vw(69) 0 vw(60);
         }
-        padding: 0.05vw;
-      }
 
-      &--megaphone {
-        & img {
-          padding: (2vw / 3.75) (4vw / 3.75) (3vw / 3.75) (5vw / 3.75);
+        & h4 {
+          font-size: 4vw;
+          font-weight: 700;
+          text-align: left;
+          margin-top: (17vw / 3.75);
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
 
           @include desktop {
-            padding: 0.23vw 0.41vw;
+            font-size: vw(21);
+            line-height: vw(26);
+            color: #000000;
+            font-weight: 500;
+            max-width: unset;
+            margin-top: vw(55);
+            max-width: vw(344);
           }
         }
 
-        &::before {
-          background: #eaf9ff;
-        }
-      }
-
-      &--search {
-        & img {
-          padding: (8vw / 3.75) (5vw / 3.75) (3vw / 3.75) (5vw / 3.75);
+        p {
+          margin-top: (18vw / 3.75);
 
           @include desktop {
-            padding: 0.729vw 0.625vw 0.156vw 0.26vw;
+            margin-top: vw(26);
           }
         }
 
-        &::before {
-          background: #aedbf0;
+        #{$this}__btn {
+          cursor: pointer;
+          margin-top: vwm(29);
+          display: block;
+          color: #e60028;
+          display: flex;
+          align-items: center;
+
+          @include desktop {
+            font-size: vw(16);
+            line-height: vw(24);
+            color: #e60028;
+            font-weight: 500;
+            margin-top: vw(38);
+          }
+
+          #{$this}__btnImg {
+            background: url("../images/icons/General/redArrow.svg");
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: vwm(15);
+            width: vwm(15);
+            margin-left: 2vw;
+
+            @include desktop {
+              height: vw(14);
+              width: vw(14);
+            }
+          }
+        }
+      }
+
+      h4 {
+        max-width: 60%;
+
+        @include desktop {
+          height: vw(43);
+          max-width: vw(344);
+        }
+      }
+
+      #{$this}__meeting {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid lightgray;
+
+        @include desktop {
+          height: vw(255);
+        }
+
+        & p {
+          flex: 0 100%;
+          font-size: vwm(12);
+          font-weight: 400;
+          margin-top: vwm(51);
+          text-align: center;
+          max-width: vwm(194);
+
+          @include desktop {
+            margin-top: vw(55);
+            max-width: vw(313);
+            height: vw(36);
+            font-size: vw(13);
+            color: #686b6e;
+          }
+        }
+
+        & button {
+          width: vwm(197);
+          height: vwm(48);
+          background: #e60028;
+          color: #ffffff;
+          font-size: vwm(14);
+          margin-top: vwm(24);
+          margin-bottom: vwm(54);
+
+          @include desktop {
+            margin-top: vw(69);
+            height: vw(54);
+            width: vw(223);
+            font-size: vw(16);
+            letter-spacing: vw(0);
+            color: #ffffff;
+            font-weight: 500;
+          }
         }
       }
     }
 
-    & h4 {
-      font-size: 2.6vw;
-      flex: 1 0 100%;
-      font-size: (12vw / 3.75);
-      font-weight: 700;
-      text-align: center;
-      margin-top: (17vw / 3.75);
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      hyphens: auto;
+    #{$this}__first {
+      background: #f7f7f7;
 
-      @include tablet {
-        max-width: 70%;
+      & span {
+        display: none;
+
+        @include desktop {
+          display: inline;
+        }
       }
 
-      @include desktop {
-        font-size: (20vw /19.2) * 1.2;
-        font-weight: 700;
-        height: 0.885vw * 1.2;
-        margin-top: (35% / 2.43);
-        max-width: unset;
-      }
-
-      @include biggerDesktop {
-        font-size: (20vw /19.2);
-        height: 0.885vw;
-      }
-    }
-
-    & p {
-      flex: 0 100%;
-      font-size: (10vw / 3.75);
-      font-weight: 400;
-      line-height: ((43vw / 3) / 3.75);
-      height: (43vw / 3.75);
-      margin-top: (18vw / 3.75);
-      max-width: (154vw / 3.75);
-      text-align: center;
-
-      @include tablet {
-        font-size: (20vw / 7.68);
-        line-height: ((20vw) / 7.68);
-        margin-top: (18vw / 7.68);
-        height: ((20vw * 5) / 7.68);
-        max-width: 92%;
-      }
-
-      @include desktop {
-        font-size: (16vw /19.2) * 1.2;
+      & p {
+        flex: 0 100%;
+        font-size: 3.5vw;
         font-weight: 400;
-        line-height: unset;
-        height: 3.593vw * 1.2;
-        margin-top: (16% / 2.43) * 1.2;
-        max-width: 80%;
-        min-width: 80%;
-      }
+        text-align: left;
+        width: 90%;
 
-      @include biggerDesktop {
-        font-size: (16vw /19.2);
-        height: 3.593vw;
-        min-width: unset;
-        margin-top: (16% / 2.43);
-        max-width: 70%;
-        min-width: 70%;
-      }
-    }
-
-    #{$this}__btn {
-      background-color: #779bc8;
-      border-radius: 3vw;
-      cursor: pointer;
-      color: white;
-      height: 2.65vw;
-      width: 6.66vw;
-
-      @include desktop {
-        font-size: 0.83vw;
-        font-weight: 700;
-        color: #ffffff;
+        @include desktop {
+          width: unset;
+          font-size: vw(15);
+          height: vw(84);
+          color: #686b6e;
+        }
       }
     }
   }

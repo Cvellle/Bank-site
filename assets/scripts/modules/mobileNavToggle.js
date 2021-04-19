@@ -19,9 +19,22 @@ function mobileNavToggle() {
       dropdown.classList.toggle("header__dropdown--visible");
     };
 
-    navButtons.forEach((el) => el.addEventListener("click", toggleNav));
+    [...navButtons]
+      .slice(1)
+      .forEach((el) => el.addEventListener("click", toggleNav));
     menuIcon.addEventListener("click", toggleNav);
     navBtn1.addEventListener("click", toggleDropdown);
+  } else {
+    const showDropdown = () => {
+      dropdown.classList.add("header__dropdown--visible");
+    };
+    const hideDropdown = (e) => {
+      if (dropdown.classList.contains("header__dropdown--visible")) {
+        dropdown.classList.remove("header__dropdown--visible");
+      }
+    };
+    navBtn1.parentNode.addEventListener("mouseenter", showDropdown);
+    navBtn1.parentNode.addEventListener("mouseleave", hideDropdown);
   }
 }
 

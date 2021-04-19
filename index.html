@@ -9,12 +9,7 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
   <meta name="keywords" content="business, planning, work, strategy" />
   <meta name="description" content="Develop your business with the newest techniques." />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
   <section class="topNavigation" id="home">
@@ -23,11 +18,28 @@
         <figure>
           <embed src="./assets/images/icons/Nav/podrska.svg" alt="podrska" />
         </figure>
+        <span class="topNavigation__supportText">
+          Korisnički centar
+        </span>
         <a href="tel:011 30 11 555">011 30 11 555</a>
       </span>
       <span class="topNavigation__eBanking">
+        <span>Budimo u kontaktu</span>
+        <div class="topNavigation__social topNavigation__social--1"></div>
+        <div class="topNavigation__social topNavigation__social--2"></div>
+        <div class="topNavigation__social topNavigation__social--3"></div>
+        <div class="topNavigation__social topNavigation__social--4"></div>
+        <span class="topNavigation__location">
+          <div class="topNavigation__locationImg"></div>
+          <span>LOAKCIJE</span>
+        </span>
+        <span class="topNavigation__list">
+          <div class="topNavigation__listImg topNavigation__listImg--1"></div>
+          <span>KURSNA LISTA</span>
+        </span>
+
         <span class="topNavigation__eBankingText">
-          ONLINE BANKING
+          <span>ONLINE BANKING</span>
         </span>
         <span class=" topNavigation__eBankingBtn">
           <span class="topNavigation__eBankingBtnText">
@@ -81,8 +93,9 @@
             <span>MAGAZIN</span>
           </a>
         </div>
-        <a href="#request-quote" role="link" class="header__navBtn header__navBtn--quote tabFocus" tabindex="0">
-          <span>REQUEST A QUOTE</span>
+        <a href="#request-quote" role="link" class="header__navBtn header__navBtn--quote header__navBtn--6"
+          tabindex="0">
+          Online banking
         </a>
         <div class="header__additionalNavMob">
           <div>O NAMA</div>
@@ -102,124 +115,73 @@
     </nav>
   </header>
   <section class="mainScreen">
-    <div class="mainScreen__textDiv">
-      <h1>Stanovništvo</h1>
-      <p>
-        <span class="desktop">
-          Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i
-          svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja. Čekamo vas u vašem komšiluku ili u našoj
-          online ekspozituri.
-        </span>
-        <span class="mobile">
-          Želite da štedite, investirate u sebe i budućnost svoje porodice? Societe Generale banka vam omogućava
-          korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
-        </span>
-      </p>
-      <div class="mainScreen__btn">
-        <span>
-          Izračunaj svoju ratu
-        </span>
-        <figure class="topNavigation__eBankingImgWrapper">
-          <embed src="./assets/images/icons/General/CTA arrow.svg" alt="podrska" />
+    <div class="contentWrapper">
+      <div class="mainScreen__textDiv">
+        <h1>Stanovništvo</h1>
+        <p>
+          <span class="desktop">
+            Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe
+            i
+            svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja. <br> Čekamo vas u vašem komšiluku ili u
+            našoj
+            online ekspozituri.
+          </span>
+          <span class="mobile">
+            Želite da štedite, investirate u sebe i budućnost svoje porodice? Societe Generale banka vam omogućava
+            korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
+          </span>
+        </p>
+        <div class="mainScreen__btn">
+          <span>
+            Izračunaj svoju ratu
+          </span>
+          <div class="mainScreen__btnImg">
+          </div>
+        </div>
+      </div>
+      <div class="mainScreen__carousel">
+        <figure class="cover__arrow cover__arrow--left leftArrow">
+          <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
         </figure>
-      </div>
-    </div>
-    <div class="mainScreen__carousel">
-      <figure class="cover__arrow cover__arrow--left leftArrow">
-        <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
-      </figure>
-      <figure class="cover__arrow cover__arrow--right rightArrow">
-        <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
-      </figure>
-      <div class="mainScreen__carouselItem opacity0 first">
-        <!-- <figure class="cover__imgWrapper">
-          <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-        </figure> -->
-      </div>
-      <div class="mainScreen__carouselItem opacity0">
-        <!-- <figure class="cover__imgWrapper">
-          <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-        </figure> -->
-      </div>
-      <div class="mainScreen__carouselItem opacity0">
-        <!-- <img src="assets/intro-carousel/3.jpg" alt="" /> -->
+        <figure class="cover__arrow cover__arrow--right rightArrow">
+          <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
+        </figure>
+        <div class="mainScreen__carouselItem opacity0 first">
+          <!-- <figure class="cover__imgWrapper">
+            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
+          </figure> -->
+        </div>
+        <div class="mainScreen__carouselItem opacity0">
+          <!-- <figure class="cover__imgWrapper">
+            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
+          </figure> -->
+        </div>
+        <div class="mainScreen__carouselItem opacity0">
+          <!-- <img src="assets/intro-carousel/3.jpg" alt="" /> -->
+        </div>
       </div>
       <div class="indicatorsDiv">
         <div class="indicator" data-num="0"></div>
         <div class="indicator" data-num="1"></div>
         <div class="indicator" data-num="2"></div>
-        <div class="indicator" data-num="3"></div>
-        <div class="indicator" data-num="4"></div>
       </div>
     </div>
   </section>
-  <!-- <section class="cover">
-    <div class="cover__slider" aria-label="slider">
-      <figure class="cover__arrow cover__arrow--left">
-        <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
-      </figure>
-      <figure class="cover__arrow cover__arrow--right">
-        <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
-      </figure>
-      <div class="cover__imagesContainer">
-        <ul class="cover__imagesSlidingRow cover__imagesSlidingRow--position1">
-          <figure class="cover__imgWrapper">
-            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="cover__imgWrapper">
-            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="cover__imgWrapper">
-            <img src="" alt="" aria-hidden="true" />
-          </figure>
-        </ul>
-      </div>
-      <nav class="cover__sliderNav" role="navigation">
-        <div class="cover__sliderBtn cover__sliderBtn--active tabFocus cover__sliderBtn--activeBtn" role="button"></div>
-        <div class="cover__sliderBtn tabFocus" role="button"></div>
-        <div class="cover__sliderBtn tabFocus" role="button"></div>
-        <div class="cover__sliderBtn tabFocus" role="button"></div>
-      </nav>
-    </div>
-    <div class="cover__textDiv">
-      <h1>STANOVNIŠTVO</h1>
-      <p>
-        Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i
-        svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja. Čekamo vas u vašem komšiluku ili u našoj
-        online ekspozituri.
-        <span>
-          Želite da štedite, investirate u sebe i budućnost svoje porodice? Societe Generale banka vam omogućava
-          korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
-        </span>
-      </p>
-      </p>
-      <button class="cover__btn tabFocus">
-        Zakažite sastanak
-      </button>
-    </div>
-  </section> -->
   <section class="special" id="blog">
     <article class="special__article special__article--1">
-      <figure class="special__imageWrapper special__imageWrapper--audience">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mob/logo.png" alt="Target audience" />
-        </picture>
-      </figure>
-      <h4>Iznenađujuće povoljni keš kredit</h4>
-      <p>
-        Rešite važna pitanja odmah, a kredit otplaćujte i na 100 meseci ako vam odgovara niža rata. Bez depozita, bez
-        žiranata i vezanosti kredita za stranu valutu!
-      </p>
-      <div>
-        <span>
+      <div class="special__first">
+        <h4>Iznenađujuće povoljni keš kredit</h4>
+        <p>
+          Rešite važna pitanja odmah, a kredit otplaćujte i na 100 meseci ako vam odgovara niža rata. Bez depozita, bez
+          žiranata i vezanosti kredita za stranu valutu!
+        </p>
+        <div class="special__btn">
           Izračunaj svoju ratu
-        </span>
-        <figure class="topNavigation__eBankingImgWrapper">
-          <embed src="./assets/images/icons/Hero slider/online banking icon.svg" alt="podrska" />
-        </figure>
+          <span class="special__btnImg">
+          </span>
+        </div>
       </div>
-      <div>
+      <div class="special__meeting">
         <p>
           Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
         </p>
@@ -229,26 +191,19 @@
       </div>
     </article>
     <article class="special__article special__article--2">
-      <figure class="special__imageWrapper special__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>Stambeni kredit sa kombinovanom kamatom</h4>
-      <p>
-        Uz vas smo i kada donosite najznačajnije odluke. Pri odabiru savršenog doma, čak i kamatna stopa radi za vas.
-        Fiksna ili varijabilna, odaberite sami nakon svake 3 godine otplate kredita.
-      </p>
-      <div>
-        <span>
+      <div class="special__first">
+        <h4>Stambeni kredit sa kombinovanom <span>kamatom</span></h4>
+        <p>
+          Uz vas smo i kada donosite najznačajnije odluke. Pri odabiru savršenog doma, čak i kamatna stopa radi za vas.
+          Fiksna ili varijabilna, odaberite sami nakon svake 3 godine otplate kredita.
+        </p>
+        <div class="special__btn">
           Izračunaj svoju ratu
-        </span>
-        <figure class="topNavigation__eBankingImgWrapper">
-          <embed src="./assets/images/icons/Hero slider/online banking icon.svg" alt="podrska" />
-        </figure>
+          <span class="special__btnImg">
+          </span>
+        </div>
       </div>
-      <div>
+      <div class="special__meeting">
         <p>
           Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
         </p>
@@ -261,71 +216,55 @@
   <section class="benefits" id="blog">
     <hgroup class="benefits__titlesGroup">
       <h2>
-        <span>
-          Izdvojili smo za vas još vrlo
-          korisnih ponuda
-        </span>
+        Izdvojili smo za vas još vrlo
+        korisnih ponuda
       </h2>
       <h3>
         Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i jednostavnijim
       </h3>
     </hgroup>
     <article class="benefits__article benefits__article--1">
-      <figure class="benefits__imageWrapper benefits__imageWrapper--audience">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mob/logo.png" alt="Target audience" />
-        </picture>
-      </figure>
-      <h4>KEŠ KREDITI</h4>
+      <div class="benefits__first">
+        <div class="benefits__imgDiv"></div>
+        <h4>KEŠ KREDITI</h4>
+        <div class="benefits__arrowImg"></div>
+      </div>
       <p>
         Super brzo do keša sa otplatom do čak 100 meseci
       </p>
     </article>
     <article class="benefits__article benefits__article--2">
-      <figure class="benefits__imageWrapper benefits__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>KREDITI ZA REFINANSIRANJE</h4>
+      <div class="benefits__first">
+        <div class="benefits__imgDiv"></div>
+        <h4>KREDITI ZA REFINANSIRANJE</h4>
+        <div class="benefits__arrowImg"></div>
+      </div>
       <p>
         Izmirite obaveze po postojećim kreditima drugih banaka
       </p>
     </article>
-    <article class="benefits__article benefits__article--2">
-      <figure class="benefits__imageWrapper benefits__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>STAMBENI KREDITI</h4>
+    <article class="benefits__article benefits__article--3">
+      <div class="benefits__first">
+        <div class="benefits__imgDiv"></div>
+        <h4>STAMBENI KREDITI</h4>
+        <div class="benefits__arrowImg"></div>
+      </div>
       <p>
         PLako do stana uz stambene kredite koji se prilagođavaju vašim mogućnostima
       </p>
     </article>
-    <article class="benefits__article benefits__article--2">
-      <figure class="benefits__imageWrapper benefits__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>OSIGURANJE</h4>
+    <article class="benefits__article benefits__article--4">
+      <div class="benefits__first">
+        <div class="benefits__imgDiv"></div>
+        <h4>OSIGURANJE</h4>
+        <div class="benefits__arrowImg"></div>
+      </div>
       <p>
         Budite bezbrižni, obezbedite se na vreme uz životno i neživotno osiguranje
       </p>
     </article>
   </section>
   <section class="video" id="about">
-    <video class="video__imgWrapper">
-      <!-- <picture>
-        <source srcset="./assets/images/videoImg.png" media="(min-width: 370px)" />
-        <img src="./assets/images/mobile/videoImg.png" alt="Our Company" />
-      </picture> -->
-    </video>
     <article class="video__textDiv">
       <h2>M-banking, da vam banka uvek bude pri ruci</h2>
       <p class="video__bodyText">
@@ -337,11 +276,14 @@
         <span>
           Saznaj više
         </span>
-        <figure class="topNavigation__eBankingImgWrapper">
-          <embed src="./assets/images/icons/Hero slider/online banking icon.svg" alt="podrska" />
-        </figure>
+        <div class="video__imgDiv"></div>
       </biv>
     </article>
+    <div class="video__imgWrapper">
+      <video class="" poster="./assets/images/video.jpeg">
+        <source src="" type="video/mp4">
+      </video>
+    </div>
   </section>
   <section class="eBanking">
     <div class="eBanking__slider" aria-label="slider">

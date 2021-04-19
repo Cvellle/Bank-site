@@ -2,19 +2,15 @@
 
 .topNavigation {
   $this: &;
-
-  //PADDING VARS
-  $paddTop: 43;
-  $paddRight: ($basePadding + (413 - $basePadding));
-  $paddBottom: 41;
-  $paddLeft: ($basePadding + (403 - $basePadding));
-
+  $contentWidth: 1437 - 59 - 46;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: #f7f7f7;
   height: (36vw / 3.8);
 
   @include desktop {
+    height: vw(53);
   }
 
   &__contenWrapper {
@@ -25,15 +21,14 @@
       align-items: center;
       color: #ffffff;
       font-style: normal;
-      font-size: (14vw / 19.2) * 1.4;
       font-weight: 400;
       justify-content: flex-end;
-      height: (15vw / 19.2) * 1.4;
-      line-height: (15vw / 19.2) * 1.4;
-      height: (15vw / 19.2) * 1.4;
+      max-width: vw($contentWidth);
+      flex: vw($contentWidth);
     }
 
     #{$this}__support {
+      order: 1;
       display: flex;
       flex: 0 0 50%;
       justify-content: flex-start;
@@ -43,10 +38,32 @@
       font-size: vwm(12);
       padding-left: vwm(16);
 
+      @include desktop {
+        justify-content: flex-end;
+        order: 2;
+      }
+
+      #{$this}__supportText {
+        display: none;
+
+        @include desktop {
+          display: inline-flex;
+          font-size: vw(14);
+          letter-spacing: vw(0);
+          line-height: vw(46);
+          color: #686b6e;
+        }
+      }
+
       figure {
         display: flex;
         align-items: center;
         width: vwm(17);
+
+        @include desktop {
+          width: vw(20);
+          margin-right: vw(13);
+        }
 
         embed {
           opacity: 0.5;
@@ -55,21 +72,47 @@
 
       a {
         padding-left: vwm(12);
+
+        @include desktop {
+          padding-left: vwm(6);
+          font-size: vw(14);
+          letter-spacing: vw(0);
+          line-height: vw(46);
+          color: #686b6e;
+        }
       }
     }
 
     #{$this}__eBanking {
+      order: 2;
       height: vwm(36);
       display: flex;
       flex: 0 0 50%;
       justify-content: flex-end;
       align-items: center;
 
+      @include desktop {
+        justify-content: flex-start;
+        order: 1;
+      }
+
+      & > :first-child {
+        display: none;
+
+        @include desktop {
+          display: inline-flex;
+          font-size: vw(14);
+          letter-spacing: vw(0);
+          line-height: vw(46);
+          color: #686b6e;
+        }
+      }
+
       #{$this}__eBankingBtnText {
         display: none;
 
         @include desktop {
-          display: inline;
+          order: 1;
         }
       }
 
@@ -99,6 +142,118 @@
           align-items: center;
           justify-content: center;
           margin: auto;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      #{$this}__social {
+        display: none;
+
+        @include desktop {
+          width: vw(20);
+          height: vw(20);
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &--1 {
+          background-image: url("../images/icons/Nav/instagram.png");
+          margin-left: vw(16);
+
+          @include desktop {
+            margin-left: vw(15);
+          }
+        }
+
+        &--2 {
+          background-image: url("../images/icons/Nav/twitter.png");
+
+          @include desktop {
+            margin-left: vw(15);
+          }
+        }
+
+        &--3 {
+          background-image: url("../images/icons/Nav/facebook.png");
+          width: vw(10);
+
+          @include desktop {
+            margin-left: vw(12);
+          }
+        }
+
+        &--4 {
+          background-image: url("../images/icons/Nav/linkedin.png");
+
+          @include desktop {
+            margin-left: vw(16);
+          }
+        }
+      }
+
+      #{$this}__location {
+        display: none;
+        font-size: vw(14);
+        letter-spacing: vw(0);
+        line-height: vw(46);
+        color: #686b6e;
+
+        @include desktop {
+          display: flex;
+          align-items: center;
+          margin-left: vw(107);
+        }
+
+        #{$this}__locationImg {
+          display: none;
+
+          @include desktop {
+            margin-right: vw(10);
+            width: vw(20);
+            height: vw(20);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("../images/icons/Nav/location.svg");
+          }
+        }
+      }
+
+      #{$this}__list {
+        display: none;
+
+        @include desktop {
+          margin-left: vw(34);
+          display: flex;
+          align-items: center;
+          font-size: vw(14);
+          letter-spacing: vw(0);
+          line-height: vw(46);
+          color: #686b6e;
+        }
+
+        #{$this}__listImg {
+          display: none;
+
+          @include desktop {
+            margin-right: vw(13);
+            width: vw(34);
+            height: vw(16);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("../images/icons/Nav/eur.svg");
+          }
         }
       }
     }
