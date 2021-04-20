@@ -1,15 +1,15 @@
 .eBanking {
   $this: &;
 
-  background-color: #f6d3c3;
   display: flex;
   flex-wrap: wrap;
-  margin-top: (81vw / 3.75);
   overflow-x: hidden;
+  padding: vwm(50) vwm(46) vwm(100) vwm(42);
+  background: #f2f2f2;
 
   @include desktop {
-    justify-content: space-between;
-    margin-top: (51vw / 19.2);
+    justify-content: center;
+    padding: vw(172) vwm(0) vw(114) vwm(0);
   }
 
   &__slider {
@@ -17,61 +17,49 @@
     flex-wrap: wrap;
     position: relative;
     flex: 0 0 100%;
-
-    @include desktop {
-      flex: 0 0 10%;
-      order: 2;
-      max-width: 10%;
-    }
-
-    &::before {
-      content: "";
-      top: 0;
-      left: 0;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 255, 0) 95%,
-        #f6d3c3 100%
-      );
-      z-index: 1;
-
-      @include tablet {
-        display: none;
-      }
-    }
+    margin-top: vwm(48);
+    justify-content: center;
+    height: vwm(161);
 
     &::after {
       content: "";
+      position: absolute;
       top: 0;
       left: 0;
-      position: absolute;
-      height: 100%;
       width: 100%;
-      background: linear-gradient(to right, #f6d3c3 0%, rgba(0, 0, 255, 0) 15%);
-      z-index: 1;
+      height: 100%;
+      background: url("../images/mask.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
 
-      @include tablet {
-        display: none;
-      }
+    @include desktop {
+      flex: 0 0 vw(711);
+      order: 2;
+      margin-left: vw(122);
+      height: vw(406);
+      margin-top: 0;
     }
 
     #{$this}__imagesContainer {
       align-items: flex-end;
       display: flex;
       flex-wrap: nowrap;
-      flex: 0 0 100%;
+      flex: 0 0 vwm(216);
       justify-content: center;
       overflow-x: hidden;
+      z-index: 1;
+      max-height: vwm(145);
+      margin-top: vwm(9);
 
       @include desktop {
         align-items: center;
-        flex: 0 0 (515vw / 19.2);
+        margin-top: vw(22);
+        flex: 0 0 vw(545);
         justify-content: unset;
-        left: (34% / 5.8);
         position: relative;
+        height: vw(363);
       }
 
       #{$this}__imagesSlidingRow {
@@ -104,59 +92,58 @@
           flex: 0 0 100%;
           display: flex;
           justify-content: center;
+          height: vwm(145);
+
+          @include desktop {
+            height: vw(363);
+          }
 
           img {
-            width: (213vw / 3.75);
-            height: auto;
+            height: vwm(145);
 
             @include desktop {
               width: unset;
-              width: (487vw / 19.2);
             }
           }
 
           @include desktop {
-            flex: 1 0 (487% / 5.15);
-            margin-right: ((515% - 487) / 5.15);
+            flex: 1 0 vw(545);
           }
         }
       }
     }
 
     #{$this}__sliderNav {
-      position: relative;
+      position: absolute;
       display: flex;
       flex: 0 0 100%;
       justify-content: center;
       z-index: 2;
+      bottom: vwm(-55);
+
+      @include desktop {
+        bottom: vw(-45);
+        height: vw(12);
+      }
 
       #{$this}__sliderBtn {
         background: url("../images/icons/Ebanking/grays.svg");
-        background-size: 100% 100%;
+        background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;
-        height: (5vw / 3.75);
-        width: (5vw / 3.75);
-        margin: (18vw / 3.75) (3vw / 3.75) 0 (3vw / 3.75);
-
-        @include tablet {
-          height: (11vw / 7.68);
-          margin: (45% / 5.8) * 1.5 ((13% / 2) * 1.5 / 5.8) * 1.5 0
-            ((13% / 2) * 1.5 / 5.8);
-          padding-top: (11% / 5.8);
-          width: (11vw / 7.68);
-        }
+        height: vwm(10);
+        width: vwm(10);
+        margin: vwm(50) vwm(5) 0 vwm(5);
 
         @include desktop {
-          height: (11vw / 19.2);
-          margin: (45% / 5.8) ((13% / 2) / 5.8) 0 ((13% / 2) / 5.8);
-          padding-top: (11% / 5.8);
-          width: (11vw / 19.2);
+          height: vw(12);
+          margin: 0 vw(17/2) 0 vw(17/2);
+          width: vw(12);
         }
 
         &--activeBtn {
           background: url("../images/icons/Ebanking/sl.svg");
-          background-size: 100% 100%;
+          background-size: contain;
           background-repeat: no-repeat;
         }
       }
@@ -166,22 +153,16 @@
       cursor: pointer;
       display: block;
       height: (13vw / 3.75);
-      top: (100vw / 3.75);
+      top: vwm(71);
       width: (17vw / 3.75);
       position: absolute;
       transition: 0.3s opacity;
-      z-index: 2;
-
-      @include tablet {
-        height: (13vw / 3.75) * 0.7;
-        top: (100vw / 3.75) * 0.7;
-        width: (17vw / 3.75) * 0.7;
-      }
+      z-index: 20;
 
       @include desktop {
-        height: 1.3vw;
+        height: vw(27);
         top: (229% / 4.976);
-        width: 2.13vw;
+        width: vw(17);
       }
 
       &:active {
@@ -193,14 +174,14 @@
         background: url("../images/icons/Ebanking/Levo.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        left: 0;
+        left: vw(-27);
       }
 
       &--right {
         background: url("../images/icons/Ebanking/Desno.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        right: 0;
+        right: vw(-27);
       }
     }
   }
@@ -208,81 +189,47 @@
   &__textDiv {
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 80%;
+    flex: 0 0 100%;
 
     @include desktop {
       justify-content: unset;
-      flex: 0 0 20vw;
+      flex: 0 0 vw(409);
+      align-content: flex-start;
     }
 
-    & h1 {
-      margin-left: (57vw / 3.75);
-      font-size: (29vw / 3.75);
-      text-align: center;
+    & h2 {
+      font-size: (20vw / 3.75);
       max-width: (217vw / 3.75);
       margin-top: (15vw / 3.75);
-
-      @include tablet {
-        font-size: (50vw / 7.68);
-        line-height: (116vw / 7.68 / 2);
-        min-height: (116vw / 7.68) * 0.7;
-        margin-top: (113vw / 7.68) * 0.3;
-        margin-left: unset;
-        width: (359% / 5.26);
-        padding: 0;
-      }
+      min-width: 100%;
 
       @include desktop {
-        font-size: (50vw / 19.2);
-        line-height: (116vw / 19.2 / 2);
-        min-height: (116vw / 19.2);
-        margin-top: (113% / 5.26);
-        margin-left: (2% / 5.26);
+        margin-top: vw(75);
         text-align: unset;
         padding: 0;
-        width: (359% / 5.26);
+        font-size: vw(30);
+        max-height: vw(30);
+        font-weight: 500;
+        line-height: unset;
       }
     }
 
     & p {
-      font-size: (12vw / 3.75);
-      margin-left: (50vw / 3.75);
-      text-align: center;
-      max-width: (232vw / 3.75);
+      font-size: vwm(14.5);
       margin-top: (26vw / 3.75);
 
-      @include tablet {
-        font-size: (15vw / 7.68) * 1.1;
-        line-height: (66 / 7.68 / 3) * 0.7;
-        min-height: (66 / 7.68) * 0.7;
-        margin-top: (37vw / 7.68) * 0.7;
-        margin-left: (4vw / 7.68) * 0.7;
-        min-width: 85%;
-      }
-
       @include desktop {
-        font-size: (15vw / 19.2) * 1.2;
-        line-height: (66 / 19.2 / 2) * 1.2;
-        min-height: (66 / 19.2) * 1.2;
-        margin-top: (37% / 5.26);
-        margin-left: (4% / 5.26);
+        line-height: vw(24);
+        color: #686b6e;
+        margin-top: vw(29);
         min-width: unset;
         text-align: left;
         width: (467% / 5.26);
-      }
-
-      @include biggerDesktop {
-        font-size: (15vw / 19.2);
-        line-height: (66 / 19.2 / 2);
-        min-height: (66 / 19.2);
+        font-size: vw(16);
       }
 
       & span {
         display: none;
-
-        @include tablet {
-          display: inline;
-        }
 
         @include desktop {
           display: inline;
@@ -291,44 +238,41 @@
     }
 
     #{$this}__btn {
-      background-color: #779bc8;
-      border-radius: (20vw / 3.75);
       cursor: pointer;
-      color: #ffffff;
-      font-size: (12vw / 3.75);
-      margin-left: (113vw / 3.75);
-      font-weight: 700;
-      margin-top: (37vw / 3.75);
-      height: (43vw / 3.75);
-      width: (105vw / 3.75);
-      transition: 0.3s;
-
-      @include tablet {
-        border-radius: (26vw / 19.2) * 2.7;
-        font-size: 0.83vw * 2.7;
-        height: 2.65vw * 2.7;
-        margin-top: (48% / 7.68);
-        margin-left: unset;
-        width: 6.66vw * 2.7;
-      }
+      color: #e60028;
+      font-size: (16vw / 3.75);
+      margin-top: (36vw / 3.75);
+      margin-right: auto;
 
       @include desktop {
-        border-radius: (26vw / 19.2);
-        color: #ffffff;
-        font-size: 0.83vw;
-        height: 2.65vw;
-        margin-top: (48% / 5.26);
-        width: 6.66vw;
-      }
-
-      &:active {
-        transition: 0.3s;
-        // filter: (alpha(0.5));
+        margin-top: vw(25);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: vw(16);
+        font-weight: 500;
+        line-height: vw(24);
+        color: #e60028;
       }
 
       &:hover {
-        transition: 0.3s;
-        opacity: 0.8;
+        color: rgb(177, 174, 174);
+        transition: 0.5s;
+      }
+
+      #{$this}__imgDiv {
+        width: vwm(20);
+        height: vwm(10);
+        background: url("../images/icons/General/redArrow.svg");
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include desktop {
+          width: vw(14);
+          height: vw(11);
+          margin-left: vw(11);
+        }
       }
     }
   }

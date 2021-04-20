@@ -112,9 +112,12 @@
       position: absolute;
       z-index: 10;
       font-size: 4vw;
+      height: 2vw;
 
       &--visible {
         display: inline-block;
+        top: 50%;
+        @include transform(translatey(-50%));
       }
     }
 
@@ -233,73 +236,90 @@
           }
         }
 
-        #{$this}__dropdown {
+        .dropdownToggle {
           position: relative;
-          display: flex;
-          flex-direction: column;
-          font-size: vwm(11);
-          display: none;
 
-          @include desktop {
-            margin-top: vw(24);
-            background: #ffffff;
-            width: vw(236);
-            max-height: vw(371);
-            font-size: vw(11);
-            margin-left: vw(71 - 28);
-            padding: vw(32) vw(45) vw(30) vw(27);
-            border-top: vw(4) solid #ff0000;
-          }
-
-          &--visible {
-            display: block;
+          & .transparent {
+            display: none;
 
             @include desktop {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
+              display: block;
+              top: 0;
+              position: absolute;
+              height: vw(24);
+              width: vw(236);
             }
           }
 
-          & > div {
-            background: #252525;
-            height: vwm(30);
-            border: none;
-            outline: none;
-            padding-left: vwm(2);
+          #{$this}__dropdown {
+            position: relative;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            font-size: vwm(11);
+            display: none;
 
             @include desktop {
+              position: absolute;
               background: #ffffff;
-              height: unset;
+              width: vw(236);
+              top: vw(24);
+              max-height: vw(371);
+              font-size: vw(11);
+              margin-left: vw(71 - 28);
+              padding: vw(32) vw(45) vw(30) vw(27);
+              border-top: vw(4) solid #ff0000;
             }
 
-            & > a {
-              border: none;
-              outline: none;
-            }
-
-            &:not(:first-child) > a {
-              border: none;
-              outline: none;
+            &--visible {
+              display: block;
 
               @include desktop {
-                text-transform: lowercase;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+              }
+            }
+
+            & > div {
+              background: #252525;
+              height: vwm(30);
+              border: none;
+              outline: none;
+              padding-left: vwm(2);
+              display: flex;
+              align-items: center;
+
+              @include desktop {
+                background: #ffffff;
+                height: unset;
               }
 
-              &:first-letter {
+              & > a {
+                border: none;
+                outline: none;
+              }
+
+              &:not(:first-child) > a {
+                border: none;
+                outline: none;
+
                 @include desktop {
-                  text-transform: uppercase;
+                  text-transform: lowercase;
+                }
+
+                &:first-letter {
+                  @include desktop {
+                    text-transform: uppercase;
+                  }
                 }
               }
             }
-          }
 
-          @include desktop {
-            position: absolute;
-            width: vw(236);
-            height: vw(371);
+            @include desktop {
+              position: absolute;
+              width: vw(236);
+              height: vw(371);
+            }
           }
         }
       }

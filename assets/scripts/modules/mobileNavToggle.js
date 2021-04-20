@@ -1,18 +1,19 @@
 function mobileNavToggle() {
   const menuIcon = document.querySelector(".header__hamburgerBtn");
   const navigation = document.querySelector(".header__navButtons");
-  const navBtn1 = document.querySelector(".header__navBtn--1");
+  const navBtn1 = document.querySelector(".header__dropDownDiv");
   const dropdown = document.querySelector(".header__dropdown");
-  const navButtons = document.querySelectorAll(".header__navBtn");
+  const dropdownToggle = document.querySelector(".transparent");
+  const closeBtn = document.querySelector(".header__close");
+
+  const navButtons = document.querySelectorAll(".header__navBtn--toggle");
   const screenWidthLimit = window.matchMedia("screen and (min-width: 1025px)");
 
   if (!screenWidthLimit.matches) {
     const toggleNav = (e) => {
       navigation.classList.toggle("header__navButtons--mobileVisible");
       menuIcon.classList.toggle("header__hamburgerBtn--mobileVisible");
-      e.target.previousElementSibling.classList.toggle(
-        "header__close--visible"
-      );
+      closeBtn.classList.toggle("header__close--visible");
     };
 
     const toggleDropdown = () => {
@@ -33,8 +34,12 @@ function mobileNavToggle() {
         dropdown.classList.remove("header__dropdown--visible");
       }
     };
-    navBtn1.parentNode.addEventListener("mouseenter", showDropdown);
-    navBtn1.parentNode.addEventListener("mouseleave", hideDropdown);
+    navBtn1.addEventListener("mouseenter", showDropdown);
+    navBtn1.addEventListener("mouseleave", hideDropdown);
+    dropdown.addEventListener("mouseenter", showDropdown);
+    dropdown.addEventListener("mouseleave", hideDropdown);
+    dropdownToggle.addEventListener("mouseenter", showDropdown);
+    dropdownToggle.addEventListener("mouseleave", hideDropdown);
   }
 }
 

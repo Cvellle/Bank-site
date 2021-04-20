@@ -5,181 +5,100 @@
   flex-wrap: wrap;
   flex: 0 0 100%;
   justify-content: center;
-
-  @include tablet {
-    align-content: flex-start;
-  }
+  padding: vwm(32) vwm(32) vwm(32) vwm(32);
 
   @include desktop {
+    padding: vw(156) vw(0) vw(92) vw(0);
   }
 
-  #{$this}__titlesGroup {
-    align-content: flex-start;
+  & h2 {
     display: flex;
-    flex-wrap: wrap;
+    flex: 0 0 100%;
+    font-size: (21.2vw / 3.75);
     justify-content: center;
 
     @include desktop {
-      justify-content: center;
-    }
-
-    & h2 {
-      display: flex;
-      flex: 0 0 (190vw / 3.75);
-      font-size: (21.2vw / 3.75);
-      max-width: (190w / 3.75);
-
-      @include tablet {
-        font-size: (51.5vw / 7.68) * 0.7;
-        font-weight: 700;
-        height: (5vw * 2);
-        margin-top: unset;
-        line-height: 5vw;
-        justify-content: center;
-      }
-
-      @include desktop {
-        font-size: (51.5vw / 19.2);
-        font-weight: 700;
-        height: (36vw /19.2);
-        margin-top: unset;
-        justify-content: center;
-        line-height: 1.875vw;
-      }
-
-      span {
-        width: unset;
-        display: inline;
-        justify-content: center;
-        text-align: center;
-
-        & > strong {
-          color: #8a5b9d;
-        }
-      }
-    }
-
-    & h3 {
-      font-size: (11vw / 3.75);
-      flex: 0 0 100%;
-      display: flex;
-      margin-top: (28vw / 3.75);
-      line-height: ((29vw / 2) / 3.75);
-      text-align: justify;
-      -moz-text-align-last: center;
-      text-align-last: center;
-      max-width: 41.197vw;
-      min-width: 100%;
-      word-break: keep-all;
-
-      @include tablet {
-        font-size: (11vw / 7.68) * 2;
-        justify-content: center;
-      }
-
-      span {
-        max-width: 70vw;
-        text-align: center;
-
-        @include desktop {
-          text-align: unset;
-          max-width: unset;
-        }
-      }
-
-      @include desktop {
-        font-size: (17vw / 19.2) * 1.2;
-        font-weight: 400;
-        height: (49vw / 19.2) * 1.2;
-        line-height: ((49vw / 2) / 19.2) * 1.2;
-        margin-bottom: unset;
-        min-width: unset;
-        justify-content: center;
-        text-align: center;
-      }
-
-      @include biggerDesktop {
-        font-size: (17vw / 19.2);
-        height: (49vw / 19.2);
-        line-height: ((49vw / 2) / 19.2);
-      }
-    }
-
-    #{$this}__hideOnMob {
-      display: none;
-
-      @include desktop {
-        display: inline;
-      }
-    }
-
-    #{$this}__break {
-      @include desktop {
-        display: none;
-      }
+      font-size: vw(32);
+      line-height: vw(32);
+      font-weight: 700;
+      height: (36vw /19.2);
+      margin-top: unset;
     }
   }
 
   &__article {
     display: flex;
-    flex: 1 0 100%;
     flex-wrap: wrap;
-    justify-content: center;
-
-    @include tablet {
-      flex: 0 0 33%;
-    }
+    justify-content: flex-start;
+    margin-top: vwm(50);
+    flex: 0 0 100%;
 
     @include desktop {
       font-size: 0.78vw;
-      flex: 0 0 33%;
+      margin: 0 vw(62/2);
     }
 
     &--1 {
       margin-top: (37vw / 3.75);
 
-      @include tablet {
-        margin-top: (37vw / 6.78);
+      @include desktop {
+        margin-top: vw(67);
+        flex: 0 0 vw(357);
       }
 
-      @include desktop {
-        margin-top: 3.177vw;
+      & p {
+        @include desktop {
+          max-width: vw(350);
+        }
       }
     }
 
     &--2 {
       margin-top: (40vw / 3.75);
 
-      @include tablet {
-        margin-top: (37vw / 6.78);
-      }
-
       @include desktop {
-        margin-top: 3.177vw;
+        margin-top: vw(67);
+        flex: 0 0 vw(359);
       }
     }
 
     &--3 {
       margin-top: (38vw / 3.75);
 
-      @include tablet {
-        margin-top: (37vw / 6.78);
+      @include desktop {
+        margin-top: vw(67);
+        flex: 0 0 vw(361);
       }
+    }
+
+    & h3 {
+      font-size: 2.6vw;
+      flex: 1 0 100%;
+      font-size: (13vw / 3.75);
+      font-weight: 700;
+      margin-bottom: (17vw / 3.8);
 
       @include desktop {
-        margin-top: 3.177vw;
+        font-size: vw(15);
+        letter-spacing: vw(2);
+        line-height: vw(15);
+        color: #666666;
+        font-weight: bold;
+        margin-bottom: vw(19);
+        max-width: unset;
       }
     }
 
     #{$this}__imageWrapper {
       position: relative;
-      height: (49vw / 3.75);
-      width: (49vw / 3.75);
+      height: (180vw / 3.8);
+      width: (318vw / 3.8);
 
       @include desktop {
         margin-top: 3.177vw;
         height: 4.63vw;
-        width: 4.63vw;
+        width: 100%;
+        height: vw(205);
       }
 
       img {
@@ -187,131 +106,77 @@
         z-index: 1;
         min-width: 100%;
       }
-
-      &::before {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: 0;
-      }
-
-      &--audience {
-        @include desktop {
-        }
-        padding: 0.05vw;
-      }
-
-      &--megaphone {
-        & img {
-          padding: (2vw / 3.75) (4vw / 3.75) (3vw / 3.75) (5vw / 3.75);
-
-          @include desktop {
-            padding: 0.23vw 0.41vw;
-          }
-        }
-
-        &::before {
-          background: #eaf9ff;
-        }
-      }
-
-      &--search {
-        & img {
-          padding: (8vw / 3.75) (5vw / 3.75) (3vw / 3.75) (5vw / 3.75);
-
-          @include desktop {
-            padding: 0.729vw 0.625vw 0.156vw 0.26vw;
-          }
-        }
-
-        &::before {
-          background: #aedbf0;
-        }
-      }
     }
 
     & h4 {
-      font-size: 2.6vw;
+      font-size: vwm(17);
       flex: 1 0 100%;
-      font-size: (12vw / 3.75);
       font-weight: 700;
-      text-align: center;
       margin-top: (17vw / 3.75);
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      hyphens: auto;
-
-      @include tablet {
-        max-width: 70%;
-      }
 
       @include desktop {
-        font-size: (20vw /19.2) * 1.2;
-        font-weight: 700;
-        height: 0.885vw * 1.2;
-        margin-top: (35% / 2.43);
+        font-size: vw(21.5);
+        height: vw(48);
+        margin-top: vw(40);
         max-width: unset;
       }
 
-      @include biggerDesktop {
-        font-size: (20vw /19.2);
-        height: 0.885vw;
+      & span {
+        @include desktop {
+          display: none;
+        }
       }
     }
 
     & p {
-      flex: 0 100%;
-      font-size: (10vw / 3.75);
-      font-weight: 400;
-      line-height: ((43vw / 3) / 3.75);
-      height: (43vw / 3.75);
-      margin-top: (18vw / 3.75);
-      max-width: (154vw / 3.75);
-      text-align: center;
-
-      @include tablet {
-        font-size: (20vw / 7.68);
-        line-height: ((20vw) / 7.68);
-        margin-top: (18vw / 7.68);
-        height: ((20vw * 5) / 7.68);
-        max-width: 92%;
-      }
+      display: none;
 
       @include desktop {
-        font-size: (16vw /19.2) * 1.2;
-        font-weight: 400;
-        line-height: unset;
-        height: 3.593vw * 1.2;
-        margin-top: (16% / 2.43) * 1.2;
-        max-width: 80%;
-        min-width: 80%;
-      }
-
-      @include biggerDesktop {
-        font-size: (16vw /19.2);
-        height: 3.593vw;
-        min-width: unset;
-        margin-top: (16% / 2.43);
-        max-width: 70%;
-        min-width: 70%;
+        display: block;
+        height: vw(136);
+        font-size: vw(19.1);
+        line-height: vw(21);
+        color: #686b6e;
+        margin-top: vw(40);
       }
     }
 
     #{$this}__btn {
-      background-color: #779bc8;
-      border-radius: 3vw;
       cursor: pointer;
-      color: white;
-      height: 2.65vw;
-      width: 6.66vw;
+      color: #e60028;
+      font-size: (16vw / 3.75);
+      margin-top: (36vw / 3.75);
+      margin-right: auto;
 
       @include desktop {
-        font-size: 0.83vw;
-        font-weight: 700;
-        color: #ffffff;
+        margin-top: vw(27);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: vw(16);
+        font-weight: 500;
+        line-height: vw(24);
+        color: #e60028;
+      }
+
+      &:hover {
+        color: rgb(177, 174, 174);
+        transition: 0.5s;
+      }
+
+      #{$this}__imgDiv {
+        width: vwm(20);
+        height: vwm(10);
+        background: url("../images/icons/General/redArrow.svg");
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include desktop {
+          width: vw(14);
+          height: vw(11);
+          margin-left: vw(11);
+        }
       }
     }
   }

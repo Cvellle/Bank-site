@@ -1,4 +1,18 @@
 .mainScreen {
+  .show {
+    opacity: 1;
+    z-index: 1;
+  }
+  .hide {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition: opacity 1s;
+  }
+
   $this: &;
   $contentWidth: 1437 - 59 - 46;
 
@@ -59,6 +73,7 @@
       font-size: vwm(16);
       width: vwm(254);
       margin-top: vwm(22);
+      color: #ffffff;
 
       @include desktop {
         margin-top: vw(33);
@@ -68,7 +83,6 @@
         font-size: vw(19);
         line-height: vw(28);
         width: vw(539);
-        color: #ffffff;
       }
     }
 
