@@ -7,127 +7,139 @@
 
   @include desktop {
     padding: vw(121) vw(0) vw(0) vw(0);
+    justify-content: flex-start;
   }
 
-  #{$this}__map {
-    flex: 0 0 100%;
+  #{$this}__borderBottomDiv {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    height: vwm(238);
-    position: relative;
-    background: #000;
+    justify-content: center;
+    flex: 0 0 100%;
 
     @include desktop {
-      flex: 0 0 50%;
-      height: vw(328);
+      border-bottom: 3px solid #f2f2f2;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: blue;
-      //   background: url(../images/ebanking1.jpeg);
-      opacity: 0.7;
-      z-index: 1;
-    }
-
-    & h2 {
-      font-weight: 500;
+    #{$this}__map {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: vwm(238);
       position: relative;
-      font-size: vwm(21);
-      color: #ffffff;
-      z-index: 3;
+      background: #000;
 
       @include desktop {
-        font-size: vw(32);
+        flex: 0 0 50%;
+        height: vw(328);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: blue;
+        //   background: url(../images/ebanking1.jpeg);
+        opacity: 0.7;
+        z-index: 1;
+      }
+
+      & h2 {
+        font-weight: 500;
+        position: relative;
+        font-size: vwm(21);
+        color: #ffffff;
+        z-index: 3;
+
+        @include desktop {
+          font-size: vw(32);
+        }
+      }
+
+      & button {
+        border-radius: vwm(28);
+        margin-top: vwm(16);
+        position: relative;
+        width: vwm(249);
+        height: vwm(60);
+        background: #ffffff;
+        color: #e60028;
+        font-size: vwm(15);
+        z-index: 3;
+
+        @include desktop {
+          width: vw(249);
+          height: vw(60);
+          font-size: vw(16);
+          margin-top: vw(30);
+        }
       }
     }
 
-    & button {
-      border-radius: vwm(28);
-      margin-top: vwm(16);
+    #{$this}__online {
       position: relative;
-      width: vwm(249);
-      height: vwm(60);
-      background: #ffffff;
-      color: #e60028;
-      font-size: vwm(15);
-      z-index: 3;
+      background: #000;
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: vwm(290);
 
       @include desktop {
-        width: vw(249);
-        height: vw(60);
-        font-size: vw(16);
-        margin-top: vw(30);
+        flex: 0 0 50%;
+        height: vw(328);
       }
-    }
-  }
 
-  #{$this}__online {
-    position: relative;
-    background: #000;
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: vwm(290);
-
-    @include desktop {
-      flex: 0 0 50%;
-      height: vw(328);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      //   background: blue;
-      //   background: url(../images/ebanking1.jpeg);
-      opacity: 0.7;
-      z-index: 1;
-    }
-
-    & h2 {
-      font-weight: 500;
-      position: relative;
-      font-size: vwm(21);
-      color: #ffffff;
-      z-index: 3;
-      text-align: center;
-
-      @include desktop {
-        font-size: vw(32);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //   background: blue;
+        //   background: url(../images/ebanking1.jpeg);
+        opacity: 0.7;
+        z-index: 1;
       }
-    }
 
-    & button {
-      border-radius: vwm(28);
-      margin-top: vwm(16);
-      position: relative;
-      width: vwm(198);
-      height: vwm(60);
-      background: #ffffff;
-      color: #e60028;
-      font-size: vwm(15);
-      z-index: 3;
+      & h2 {
+        font-weight: 500;
+        position: relative;
+        font-size: vwm(21);
+        color: #ffffff;
+        z-index: 3;
+        text-align: center;
 
-      @include desktop {
-        width: vw(198);
-        height: vw(60);
-        font-size: vw(16);
-        margin-top: vw(30);
+        @include desktop {
+          font-size: vw(32);
+        }
+      }
+
+      & button {
+        border-radius: vwm(28);
+        margin-top: vwm(16);
+        position: relative;
+        width: vwm(198);
+        height: vwm(60);
+        background: #ffffff;
+        color: #e60028;
+        font-size: vwm(15);
+        z-index: 3;
+
+        @include desktop {
+          width: vw(198);
+          height: vw(60);
+          font-size: vw(16);
+          margin-top: vw(30);
+        }
       }
     }
   }
@@ -141,22 +153,22 @@
 
     @include desktop {
       flex: 0 0 vw(508);
-      padding: vw(0) vw(0) vw(0) vw(50);
+      padding: vw(146) vw(0) vw(179) vw(59);
       height: vw(529);
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      //   background: blue;
-      //   background: url(../images/ebanking1.jpeg);
-      opacity: 0.7;
-      z-index: 1;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   //   background: blue;
+    //   //   background: url(../images/ebanking1.jpeg);
+    //   opacity: 0.7;
+    //   z-index: 1;
+    // }
 
     #{$this}__textDiv {
       display: flex;
@@ -176,13 +188,12 @@
         min-width: 100%;
 
         @include desktop {
-          margin-top: vw(75);
+          margin-top: vw(0);
           text-align: unset;
           padding: 0;
           font-size: vw(30);
-          max-height: vw(30);
+          height: vw(31);
           font-weight: 500;
-          line-height: unset;
         }
       }
 
@@ -192,12 +203,11 @@
         color: #7e8083;
 
         @include desktop {
-          line-height: vw(24);
-          margin-top: vw(29);
-          min-width: unset;
-          text-align: left;
-          width: (467% / 5.26);
+          line-height: vw(23);
+          margin-top: vw(21);
+          width: vw(367);
           font-size: vw(16);
+          height: vw(87);
         }
 
         & span {
@@ -217,14 +227,19 @@
         margin-right: auto;
 
         @include desktop {
-          margin-top: vw(25);
+          margin-top: vw(48);
           display: flex;
           align-items: center;
           justify-content: flex-start;
           font-size: vw(16);
           font-weight: 500;
-          line-height: vw(24);
+          height: vw(16);
           color: #e60028;
+        }
+
+        span {
+          display: inline-block;
+          height: vw(16);
         }
 
         &:hover {
@@ -257,7 +272,9 @@
     padding: vwm(44) vwm(0) vwm(44) vwm(51);
 
     @include desktop {
-      flex: 0 0 100%;
+      flex: 0 0 vw(616);
+      padding: vw(92) vw(0) vw(81) vw(76);
+      height: vw(529);
     }
 
     #{$this}__linksWrapper {
@@ -267,24 +284,51 @@
       flex-direction: column;
       justify-content: space-between;
 
+      @include desktop {
+        height: vw(123 + 12 + 15 + 30);
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      & div {
+        @include desktop {
+          height: vw(12);
+          margin-bottom: vw(32);
+        }
+      }
+
       & a {
         letter-spacing: vwm(1);
+        display: block;
+
+        @include desktop {
+          letter-spacing: vw(2);
+          font-size: vw(15);
+          height: vw(12);
+        }
       }
     }
   }
 
   #{$this}__social {
-    padding: vwm(46) vwm(31) vwm(80) vwm(30);
+    padding: vwm(46) vwm(31) vwm(80) vwm(0);
     flex: 0 0 100%;
     color: #a6a6a6;
     font-size: vwm(14);
 
     @include desktop {
+      padding: vw(81 - 30) vw(31) vw(80) vw(0);
       flex: 0 0 100%;
+      font-size: vw(15);
+      height: vw(12);
     }
 
     & > :first-child {
-      margin-left: vwm(21);
+      margin-left: vwm(0);
+
+      @include desktop {
+        margin-left: 0;
+      }
     }
   }
 
@@ -298,7 +342,8 @@
     background-position: 50% 0%;
 
     @include desktop {
-      flex: 0 0 100%;
+      flex: 1 0 auto;
+      height: vw(529);
     }
   }
 
@@ -310,6 +355,9 @@
 
     @include desktop {
       flex: 0 0 100%;
+      border-top: 2px solid #cccccc;
+      padding: vw(0) vw(60) vw(0) vw(53);
+      font-size: vw(12);
     }
 
     #{$this}__bottomLinks {
@@ -318,8 +366,35 @@
       display: flex;
       justify-content: space-between;
 
-      & > :last-child {
-        margin-top: vwm(3);
+      @include desktop {
+        flex-direction: row;
+        height: vw(84);
+        padding-top: vw(28);
+      }
+
+      #{$this}__leftLinks {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop {
+          flex-direction: row;
+          flex: 0 0 vw(1078);
+        }
+
+        #{$this}__bottomLink {
+          @include desktop {
+            height: vw(12);
+          }
+        }
+
+        & > :last-child {
+          margin-top: vwm(3);
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
       }
     }
 
@@ -331,8 +406,20 @@
       display: flex;
       justify-content: space-between;
 
+      @include desktop {
+        width: vw(80);
+        display: inline-flex;
+        font-size: vw(14);
+        margin-top: unset;
+      }
+
       & span:active:not(:nth-child(2)) {
         color: #e60028;
+
+        @include desktop {
+          height: vw(14);
+          display: inline-flex;
+        }
       }
     }
   }
