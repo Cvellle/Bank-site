@@ -69,12 +69,14 @@
           <div class="header__dropDownDiv">
             <a href="#home" class="header__navBtn header__navBtn--toggle header__navBtn--1">
               <span>STANOVNIŠTVO</span>
+              <div class="header__mobArrow header__mobArrow--rotated"></div>
             </a>
             <div class="dropdownToggle">
               <div class="transparent"></div>
               <div class="header__dropdown">
                 <div><a href="">KREDITI</a></div>
                 <div><a href="">KEŠ KREDITI</a></div>
+                <div><a href="">KREDITI ZA REFINANSIRANJE</a></div>
                 <div><a href="">STAMBENI KREDITI</a></div>
                 <div><a href="">AUTO KREDITI</a></div>
                 <div><a href="">EVERGRIN KREDITI ZA PEZIONERE</a></div>
@@ -97,7 +99,7 @@
           </a>
         </div>
         <a href="#request-quote" role="link"
-          class="header__navBtn header__navBtn--toggle header__navBtn--quote header__navBtn--6" tabindex="0">
+          class="header__navBtn header__navBtn--toggle header__navBtn--big header__navBtn--6" tabindex="0">
           Online banking
         </a>
         <div class="header__additionalNavMob">
@@ -117,290 +119,443 @@
       </div>
     </nav>
   </header>
-  <section class="mainScreen">
-    <div class="contentWrapper">
-      <div class="mainScreen__textDiv">
-        <h1>Stanovništvo</h1>
-        <p>
-          <span class="desktop">
-            Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe
-            i
-            svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja. <br> Čekamo vas u vašem komšiluku ili u
-            našoj
-            online ekspozituri.
-          </span>
-          <span class="mobile">
-            Želite da štedite, investirate u sebe i budućnost svoje porodice? Societe Generale banka vam omogućava
-            korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
-          </span>
-        </p>
-        <div class="mainScreen__btn">
-          <span>
+  <main>
+    <section class="mainScreen">
+      <div class="contentWrapper">
+        <div class="mainScreen__textDiv">
+          <h1>Stanovništvo</h1>
+          <p>
+            <span class="desktop">
+              Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za
+              sebe
+              i
+              svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja. <br> Čekamo vas u vašem komšiluku ili
+              u
+              našoj
+              online ekspozituri.
+            </span>
+            <span class="mobile">
+              Želite da štedite, investirate u sebe i budućnost svoje porodice? Societe Generale banka vam omogućava
+              korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
+            </span>
+          </p>
+          <div class="mainScreen__btn">
+            <span>
+              Izračunaj svoju ratu
+            </span>
+            <div class="mainScreen__btnImg">
+            </div>
+          </div>
+        </div>
+        <div class="mainScreen__carousel">
+          <figure class="cover__arrow cover__arrow--left leftArrow">
+            <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
+          </figure>
+          <figure class="cover__arrow cover__arrow--right rightArrow">
+            <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
+          </figure>
+          <div class="mainScreen__carouselItem opacity0 first">
+            <figure class="cover__imgWrapper">
+              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
+            </figure>
+          </div>
+          <div class="mainScreen__carouselItem opacity0">
+            <figure class="cover__imgWrapper">
+              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
+            </figure>
+          </div>
+          <div class="mainScreen__carouselItem opacity0">
+            <figure class="cover__imgWrapper">
+              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
+            </figure>
+          </div>
+        </div>
+        <div class="indicatorsDiv">
+          <div class="indicator mainIndicatorActive" data-num="0"></div>
+          <div class="indicator" data-num="1"></div>
+          <div class="indicator" data-num="2"></div>
+        </div>
+      </div>
+    </section>
+    <section class="special" id="blog">
+      <article class="special__article special__article--1">
+        <div class="special__first">
+          <h4>Iznenađujuće povoljni keš kredit</h4>
+          <p>
+            Rešite važna pitanja odmah, a kredit otplaćujte i na 100 meseci ako vam odgovara niža rata. Bez depozita,
+            bez
+            žiranata i vezanosti kredita za stranu valutu!
+          </p>
+          <div class="special__btn">
             Izračunaj svoju ratu
+            <span class="special__btnImg">
+            </span>
+          </div>
+        </div>
+        <div class="special__meeting">
+          <p>
+            Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
+          </p>
+          <button>
+            Zakaži sastanak
+          </button>
+        </div>
+      </article>
+      <article class="special__article special__article--2">
+        <div class="special__first">
+          <h4>Stambeni kredit sa kombinovanom <span>kamatom</span></h4>
+          <p>
+            Uz vas smo i kada donosite najznačajnije odluke. Pri odabiru savršenog doma, čak i kamatna stopa radi za
+            vas.
+            Fiksna ili varijabilna, odaberite sami nakon svake 3 godine otplate kredita.
+          </p>
+          <div class="special__btn">
+            Izračunaj svoju ratu
+            <span class="special__btnImg">
+            </span>
+          </div>
+        </div>
+        <div class="special__meeting">
+          <p>
+            Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
+          </p>
+          <button>
+            Zakaži sastanak
+          </button>
+        </div>
+      </article>
+    </section>
+    <section class="benefits" id="blog">
+      <hgroup class="benefits__titlesGroup">
+        <h2>
+          Izdvojili smo za vas još vrlo
+          korisnih ponuda
+        </h2>
+        <h3>
+          Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i jednostavnijim
+        </h3>
+      </hgroup>
+      <article class="benefits__article benefits__article--1">
+        <div class="benefits__first">
+          <div class="benefits__imgDiv"></div>
+          <h4>KEŠ KREDITI</h4>
+          <div class="benefits__arrowImg"></div>
+        </div>
+        <p>
+          Super brzo do keša sa otplatom do čak 100 meseci
+        </p>
+      </article>
+      <article class="benefits__article benefits__article--2">
+        <div class="benefits__first">
+          <div class="benefits__imgDiv"></div>
+          <h4>KREDITI ZA REFINANSIRANJE</h4>
+          <div class="benefits__arrowImg"></div>
+        </div>
+        <p>
+          Izmirite obaveze po postojećim kreditima drugih banaka
+        </p>
+      </article>
+      <article class="benefits__article benefits__article--3">
+        <div class="benefits__first">
+          <div class="benefits__imgDiv"></div>
+          <h4>STAMBENI KREDITI</h4>
+          <div class="benefits__arrowImg"></div>
+        </div>
+        <p>
+          PLako do stana uz stambene kredite koji se prilagođavaju vašim mogućnostima
+        </p>
+      </article>
+      <article class="benefits__article benefits__article--4">
+        <div class="benefits__first">
+          <div class="benefits__imgDiv"></div>
+          <h4>OSIGURANJE</h4>
+          <div class="benefits__arrowImg"></div>
+        </div>
+        <p>
+          Budite bezbrižni, obezbedite se na vreme uz životno i neživotno osiguranje
+        </p>
+      </article>
+    </section>
+    <section class="video" id="about">
+      <article class="video__textDiv">
+        <h2>M-banking, da vam banka uvek bude pri ruci</h2>
+        <p class="video__bodyText">
+          Uživajte u svom vremenu i sa svojim prijateljima, a bankarske stvari rešavajte kada vama to odgovara. Putem
+          besplatne mobilne aplikacije, proverite stanje i prebacujte sredstva između svojih računa, plaćajte račune bez
+          provizije, novac menjajte po povoljnijem kursu 24/7 i još mnogo toga.
+        </p>
+        <biv class="video__btn" role="link" tabindex="0">
+          <span>
+            Saznaj više
           </span>
-          <div class="mainScreen__btnImg">
+          <div class="video__imgDiv"></div>
+        </biv>
+      </article>
+      <div class="video__imgWrapper">
+        <video class="" poster="./assets/images/video.jpeg">
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </section>
+    <section class="eBanking">
+      <div class="eBanking__textDiv">
+        <h2>E-banking, banka na klik!</h2>
+        <p>
+          Sve one svakodnevne transakcije dostupne su vam na računaru, bez izlaska iz doma i suvišne papirologije. Ne
+          samo
+          da ćete plaćati račune bez provizije i menjati novac po povoljnijem kursu 24/7, već ćemo vam online i
+          jednostavno, odobriti dozvoljeni minus, a i keš kredit.
+        </p>
+        <div class="eBanking__btn tabFocus" tabindex="0">
+          <span>
+            Saznaj više
+          </span>
+          <div class="eBanking__imgDiv"></div>
+        </div>
+      </div>
+      <div class="eBanking__slider" aria-label="slider">
+        <span class="eBanking__arrow eBanking__arrow--left tabFocus" role="button" tabindex="0"></span>
+        <span class="eBanking__arrow eBanking__arrow--right tabFocus" role="button" tabindex="0"></span>
+        <div class="eBanking__imagesContainer">
+          <ul class="eBanking__imagesSlidingRow eBanking__imagesSlidingRow--position1">
+            <figure class="eBanking__imgWrapper">
+              <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
+            </figure>
+            <figure class="eBanking__imgWrapper">
+              <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
+            </figure>
+            <figure class="eBanking__imgWrapper">
+              <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
+            </figure>
+            <figure class="eBanking__imgWrapper">
+              <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
+            </figure>
+          </ul>
+        </div>
+        <nav class="eBanking__sliderNav" role="navigation">
+          <div class="eBanking__sliderBtn eBanking__sliderBtn--active tabFocus eBanking__sliderBtn--activeBtn"
+            role="button" tabindex="0"></div>
+          <div class="eBanking__sliderBtn tabFocus" role="button"></div>
+          <div class="eBanking__sliderBtn tabFocus" role="button"></div>
+          <div class="eBanking__sliderBtn tabFocus" role="button"></div>
+        </nav>
+      </div>
+    </section>
+    <section class="magazine" id="blog">
+      <h2>
+        SoGe magazin
+      </h2>
+      <article class="magazine__article magazine__article--1">
+        <h3>ONLINE KREDIT</h3>
+        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+          <picture>
+            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/logo.png" alt="Development" />
+          </picture>
+        </figure>
+        <h4>Zašto je strpljenje jedna od ključnih karakteristika dobrog <span>menadžera</span></h4>
+        <p>
+          Nova jedinstva opcija u Societe Generale e-banking platformi omogućava korisnicima da brzo i lako realizuju
+          kompletan proces odobrenja kredita online. U nekoliko koraka u okviru e-banking platforme, dođite do željene
+          sume novca!
+        </p>
+        <div class="magazine__btn">
+          <span>
+            Saznaj više
+          </span>
+          <div class="magazine__imgDiv"></div>
+        </div>
+      </article>
+      <article class="magazine__article magazine__article--2">
+        <h3>INVESTICIONO BANKARSTVO
+        </h3>
+        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+          <picture>
+            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/logo.png" alt="Development" />
+          </picture>
+        </figure>
+        <h4>Šta kada niste sigurni šta želite i kada imate kreativnu blokadu</h4>
+        <p>
+          Societe Generale Osiguranje je osiguravajuće društvo specijalizovano za životna osiguranja. U Srbiji
+          primenjujemo iskustva i znanja iz poslovanja SOGECAP na svetskom tržištu.
+        </p>
+        <div class="magazine__btn">
+          <span>
+            Saznaj više
+          </span>
+          <div class="magazine__imgDiv"></div>
+        </div>
+      </article>
+      <article class="magazine__article magazine__article--3">
+        <h3>FAKTORING</h3>
+        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+          <picture>
+            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/logo.png" alt="Development" />
+          </picture>
+        </figure>
+        <h4>Moguća i štednja uz trošenje u societe generale banci</h4>
+        <p>
+          Nova jedinstva opcija u Societe Generale e-banking platformi omogućava korisnicima da brzo i lako realizuju
+          kompletan proces odobrenja kredita online. U nekoliko koraka u okviru e-banking platforme, dođite do željene
+          sume novca!
+        </p>
+        <div class="magazine__btn">
+          <span>
+            Saznaj više
+          </span>
+          <div class="magazine__imgDiv"></div>
+        </div>
+      </article>
+    </section>
+    <section class="question">
+      <h2>Imate pitanja za nas? </h2>
+      <h3>Razgovarajte sa nama! Pitajte, sugerišite, recite šta mislite, preporučite - odgovor će vas vrlo brzo sačekati
+        u
+        vašem inboksu.
+      </h3>
+      <form class="question__form">
+        <div class="question__email">
+          <span>Upišite svoju email adresu</span>
+          <div class="question__emailWrapper">
+            <input type="email" class="question__emailInput" maxlength="50">
+          </div>
+        </div>
+        <div class="question__message">
+          <span>Postavite nam pitanje ili kratko opišite svoju
+            sugestiju</span>
+          <div class="question__textareaWrapper">
+            <textarea name="" cols="30" rows="10" class="question__textArea" maxlength="350"></textarea>
+          </div>
+        </div>
+        <div class="question__checkboxWrapper">
+          <span></span>
+          <input type="checkbox" name="confirm" class="checked">
+          <label for="confirm">Postavite nam pitanje ili kratko opišite svoju
+            sugestiju</label>
+        </div>
+        <input type="submit" value="Pošalji" class="question__submitBtn">
+      </form>
+    </section>
+    <section class="table">
+      <div class="table__contentWrapper">
+        <div class="table__example table__example--1">
+          <div class="table__button table__button--1"><span>Reprezntativni primer 1</span>
+            <div class="table__dropImg"></div>
+          </div>
+          <div class="table__togglingDiv">
+            <h3>Stambeni kredit iz sredstava banke sa promenljivom
+              kamatnom stopom</h3>
+            <div class="table__content"><span>Iznos kredita</span><span>200.000din</span></div>
+            <div class="table__content"><span>Rok otplate</span><span>60 meseci</span></div>
+            <div class="table__content"><span>Mesečna rata </span><span>22,00%</span></div>
+            <div class="table__content"><span>Administrativni trošak</span><span>5.561 dinara</span></div>
+            <div class="table__content"><span>NKS na godišnjem nivou</span><span>4.000 dinara</span></div>
+            <h4>Troškovi koji prate odobrenje kredita, poznati u trenutku oglašavanja</h4>
+            <div class="table__content"><span>Menica</span><span>50 dinara</span></div>
+            <div class="table__content"><span>Osnovni izveštaj kreditnog biroa</span><span>246 dinara</span></div>
+            <div class="table__content"><span>EKS na godišnjem nivou</span><span>26,05%</span></div>
+            <div class="table__content"><span>Ukupan iznos kredira (glavnica, kamata i
+                troškovi)</span><span>37.960 dinara</span>
+            </div>
+            <small>Efektivna kamatna stopa obrčunata na dan XX.XX.XXXX. Godine</small>
+            <div class="table__closeDiv"><span>Zatvori</span>
+              <div class="table__closeBtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="table__example table__example--2">
+          <div class="table__button table__button--2"><span>Reprezntativni primer 2</span>
+            <div class="table__dropImg"></div>
+          </div>
+          <div class="table__togglingDiv">
+            <h3>Stambeni kredit iz sredstava banke sa promenljivom
+              kamatnom stopom</h3>
+            <div class="table__content"><span>Iznos kredita</span><span>200.000din</span></div>
+            <div class="table__content"><span>Rok otplate</span><span>60 meseci</span></div>
+            <div class="table__content"><span>Mesečna rata </span><span>22,00%</span></div>
+            <div class="table__content"><span>Administrativni trošak</span><span>5.561 dinara</span></div>
+            <div class="table__content"><span>NKS na godišnjem nivou</span><span>4.000 dinara</span></div>
+            <h4>Troškovi koji prate odobrenje kredita, poznati u trenutku oglašavanja</h4>
+            <div class="table__content"><span>Menica</span><span>50 dinara</span></div>
+            <div class="table__content"><span>Osnovni izveštaj kreditnog biroa</span><span>246 dinara</span></div>
+            <div class="table__content"><span>EKS na godišnjem nivou</span><span>26,05%</span></div>
+            <div class="table__content"><span>Ukupan iznos kredira (glavnica, kamata i
+                troškovi)</span><span>37.960 dinara</span>
+            </div>
+            <small>Efektivna kamatna stopa obrčunata na dan XX.XX.XXXX. Godine</small>
+            <div class="table__closeDiv"><span>Zatvori</span>
+              <div class="table__closeBtn"></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="mainScreen__carousel">
-        <figure class="cover__arrow cover__arrow--left leftArrow">
-          <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
-        </figure>
-        <figure class="cover__arrow cover__arrow--right rightArrow">
-          <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
-        </figure>
-        <div class="mainScreen__carouselItem opacity0 first">
-          <figure class="cover__imgWrapper">
-            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-          </figure>
-        </div>
-        <div class="mainScreen__carouselItem opacity0">
-          <figure class="cover__imgWrapper">
-            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-          </figure>
-        </div>
-        <div class="mainScreen__carouselItem opacity0">
-          <figure class="cover__imgWrapper">
-            <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-          </figure>
-        </div>
-      </div>
-      <div class="indicatorsDiv">
-        <div class="indicator" data-num="0"></div>
-        <div class="indicator" data-num="1"></div>
-        <div class="indicator" data-num="2"></div>
-      </div>
-    </div>
-  </section>
-  <section class="special" id="blog">
-    <article class="special__article special__article--1">
-      <div class="special__first">
-        <h4>Iznenađujuće povoljni keš kredit</h4>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="footer__map">
+      <h2>Mapa ekspozitura</h2>
+      <button>
+        Pronađite ekspozituru
+      </button>
+    </section>
+    <section class="footer__online">
+      <h2>Online ekspozitura</h2>
+      <button>
+        Saznaj više
+      </button>
+    </section>
+    <section class="footer__career">
+      <div class="footer__textDiv">
+        <h2>Karijera u Societe Generale</h2>
         <p>
-          Rešite važna pitanja odmah, a kredit otplaćujte i na 100 meseci ako vam odgovara niža rata. Bez depozita, bez
-          žiranata i vezanosti kredita za stranu valutu!
+          Zanima vas rad u našoj banci? Societe Generale je banka koja raste sa svojim zaposlenima. Postanite i vi deo
+          tima kojem milioni ljudi širom sveta decenijama ukazuje svoje poverenje.
         </p>
-        <div class="special__btn">
-          Izračunaj svoju ratu
-          <span class="special__btnImg">
+        <div class="footer__btn tabFocus" tabindex="0">
+          <span>
+            Saznaj više
           </span>
+          <div class="footer__imgDiv"></div>
         </div>
       </div>
-      <div class="special__meeting">
-        <p>
-          Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
-        </p>
-        <button>
-          Zakaži sastanak
-        </button>
+    </section>
+    <section class="footer__links">
+      <div class="footer__linksWrapper">
+        <div><a href="" class="footer__link">STANOVNIŠTVO</a></div>
+        <div><a href="" class="footer__link">MALI BIZNIS</a></div>
+        <div><a href="" class="footer__link">PRIVREDA</a></div>
+        <div><a href="" class="footer__link">PRIVATNO BANKARSTVO</a></div>
+        <div><a href="" class="footer__link">O NAMA</a></div>
+        <div><a href="" class="footer__link">OBAVEŠTENJA</a></div>
+        <div><a href="" class="footer__link">KONTAKTI</a></div>
+        <div><a href="" class="footer__link">MAGAZIN</a></div>
       </div>
-    </article>
-    <article class="special__article special__article--2">
-      <div class="special__first">
-        <h4>Stambeni kredit sa kombinovanom <span>kamatom</span></h4>
-        <p>
-          Uz vas smo i kada donosite najznačajnije odluke. Pri odabiru savršenog doma, čak i kamatna stopa radi za vas.
-          Fiksna ili varijabilna, odaberite sami nakon svake 3 godine otplate kredita.
-        </p>
-        <div class="special__btn">
-          Izračunaj svoju ratu
-          <span class="special__btnImg">
-          </span>
-        </div>
+    </section>
+    <section class="footer__social">
+      <div><a href="">BUDIMO U KONTAKU</a></div>
+      <div class="footer__socialLinks"></div>
+      <div class="footer__storeLinks">
+        <div class="footer__storeLink footer__storeLink--1"></div>
+        <div class="footer__storeLink footer__storeLink--2"></div>
+        <div class="footer__storeLink footer__storeLink--3"></div>
       </div>
-      <div class="special__meeting">
-        <p>
-          Naši iskusni bankari vam stoje na raspolaganju. Pronađimo zajedno najpovoljnije rešenje za vas.
-        </p>
-        <button>
-          Zakaži sastanak
-        </button>
+    </section>
+    <section class="footer__mobile"></section>
+    <section class="footer__bottomSection">
+      <div class="footer__bottomLinks">
+        <div><a href="" class="footer__bottomLink">PRAVNA REGULATIVA</a></div>
+      <div><a href="" class="footer__bottomLink">UGOVOR O OSNIVANJU</a></div>
+      <div><a href="" class="footer__bottomLink">STATUT BANKE</a></div>
+      <div><a href="" class="footer__bottomLink">DEVIZNI HEDŽING</a></div>
+      <div><a href="" class="footer__bottomLink">TVOJ NOVAC</a></div>
+      <div><a href="" class="footer__bottomLink">KODEKS PROFESIONALNOG PONAŠANJA</a></div>
+      <div><a href="" class="footer__bottomLink">&#169; SGBS 2017</a></div>
       </div>
-    </article>
-  </section>
-  <section class="benefits" id="blog">
-    <hgroup class="benefits__titlesGroup">
-      <h2>
-        Izdvojili smo za vas još vrlo
-        korisnih ponuda
-      </h2>
-      <h3>
-        Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i jednostavnijim
-      </h3>
-    </hgroup>
-    <article class="benefits__article benefits__article--1">
-      <div class="benefits__first">
-        <div class="benefits__imgDiv"></div>
-        <h4>KEŠ KREDITI</h4>
-        <div class="benefits__arrowImg"></div>
-      </div>
-      <p>
-        Super brzo do keša sa otplatom do čak 100 meseci
-      </p>
-    </article>
-    <article class="benefits__article benefits__article--2">
-      <div class="benefits__first">
-        <div class="benefits__imgDiv"></div>
-        <h4>KREDITI ZA REFINANSIRANJE</h4>
-        <div class="benefits__arrowImg"></div>
-      </div>
-      <p>
-        Izmirite obaveze po postojećim kreditima drugih banaka
-      </p>
-    </article>
-    <article class="benefits__article benefits__article--3">
-      <div class="benefits__first">
-        <div class="benefits__imgDiv"></div>
-        <h4>STAMBENI KREDITI</h4>
-        <div class="benefits__arrowImg"></div>
-      </div>
-      <p>
-        PLako do stana uz stambene kredite koji se prilagođavaju vašim mogućnostima
-      </p>
-    </article>
-    <article class="benefits__article benefits__article--4">
-      <div class="benefits__first">
-        <div class="benefits__imgDiv"></div>
-        <h4>OSIGURANJE</h4>
-        <div class="benefits__arrowImg"></div>
-      </div>
-      <p>
-        Budite bezbrižni, obezbedite se na vreme uz životno i neživotno osiguranje
-      </p>
-    </article>
-  </section>
-  <section class="video" id="about">
-    <article class="video__textDiv">
-      <h2>M-banking, da vam banka uvek bude pri ruci</h2>
-      <p class="video__bodyText">
-        Uživajte u svom vremenu i sa svojim prijateljima, a bankarske stvari rešavajte kada vama to odgovara. Putem
-        besplatne mobilne aplikacije, proverite stanje i prebacujte sredstva između svojih računa, plaćajte račune bez
-        provizije, novac menjajte po povoljnijem kursu 24/7 i još mnogo toga.
-      </p>
-      <biv class="video__btn" role="link" tabindex="0">
-        <span>
-          Saznaj više
-        </span>
-        <div class="video__imgDiv"></div>
-      </biv>
-    </article>
-    <div class="video__imgWrapper">
-      <video class="" poster="./assets/images/video.jpeg">
-        <source src="" type="video/mp4">
-      </video>
-    </div>
-  </section>
-  <section class="eBanking">
-    <div class="eBanking__textDiv">
-      <h2>E-banking, banka na klik!</h2>
-      <p>
-        Sve one svakodnevne transakcije dostupne su vam na računaru, bez izlaska iz doma i suvišne papirologije. Ne samo
-        da ćete plaćati račune bez provizije i menjati novac po povoljnijem kursu 24/7, već ćemo vam online i
-        jednostavno, odobriti dozvoljeni minus, a i keš kredit.
-      </p>
-      <div class="eBanking__btn tabFocus" tabindex="0">
-        <span>
-          Saznaj više
-        </span>
-        <div class="eBanking__imgDiv"></div>
-      </div>
-    </div>
-    <div class="eBanking__slider" aria-label="slider">
-      <span class="eBanking__arrow eBanking__arrow--left tabFocus" role="button" tabindex="0"></span>
-      <span class="eBanking__arrow eBanking__arrow--right tabFocus" role="button" tabindex="0"></span>
-      <div class="eBanking__imagesContainer">
-        <ul class="eBanking__imagesSlidingRow eBanking__imagesSlidingRow--position1">
-          <figure class="eBanking__imgWrapper">
-            <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="eBanking__imgWrapper">
-            <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="eBanking__imgWrapper">
-            <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="eBanking__imgWrapper">
-            <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
-          </figure>
-        </ul>
-      </div>
-      <nav class="eBanking__sliderNav" role="navigation">
-        <div class="eBanking__sliderBtn eBanking__sliderBtn--active tabFocus eBanking__sliderBtn--activeBtn"
-          role="button" tabindex="0"></div>
-        <div class="eBanking__sliderBtn tabFocus" role="button"></div>
-        <div class="eBanking__sliderBtn tabFocus" role="button"></div>
-        <div class="eBanking__sliderBtn tabFocus" role="button"></div>
-      </nav>
-    </div>
-  </section>
-  <section class="magazine" id="blog">
-    <h2>
-      SoGe magazin
-    </h2>
-    <article class="magazine__article magazine__article--1">
-      <h3>ONLINE KREDIT</h3>
-      <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>Zašto je strpljenje jedna od ključnih karakteristika dobrog <span>menadžera</span></h4>
-      <p>
-        Nova jedinstva opcija u Societe Generale e-banking platformi omogućava korisnicima da brzo i lako realizuju
-        kompletan proces odobrenja kredita online. U nekoliko koraka u okviru e-banking platforme, dođite do željene
-        sume novca!
-      </p>
-      <div class="magazine__btn">
-        <span>
-          Saznaj više
-        </span>
-        <div class="magazine__imgDiv"></div>
-      </div>
-    </article>
-    <article class="magazine__article magazine__article--2">
-      <h3>INVESTICIONO BANKARSTVO
-      </h3>
-      <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>Šta kada niste sigurni šta želite i kada imate kreativnu blokadu</h4>
-      <p>
-        Societe Generale Osiguranje je osiguravajuće društvo specijalizovano za životna osiguranja. U Srbiji
-        primenjujemo iskustva i znanja iz poslovanja SOGECAP na svetskom tržištu.
-      </p>
-      <div class="magazine__btn">
-        <span>
-          Saznaj više
-        </span>
-        <div class="magazine__imgDiv"></div>
-      </div>
-    </article>
-    <article class="magazine__article magazine__article--3">
-      <h3>FAKTORING</h3>
-      <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
-        <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-          <img src="./assets/images/mobile/logo.png" alt="Development" />
-        </picture>
-      </figure>
-      <h4>Moguća i štednja uz trošenje u societe generale banci</h4>
-      <p>
-        Nova jedinstva opcija u Societe Generale e-banking platformi omogućava korisnicima da brzo i lako realizuju
-        kompletan proces odobrenja kredita online. U nekoliko koraka u okviru e-banking platforme, dođite do željene
-        sume novca!
-      </p>
-      <div class="magazine__btn">
-        <span>
-          Saznaj više
-        </span>
-        <div class="magazine__imgDiv"></div>
-      </div>
-    </article>
-  </section>
+      <div class="footer__languages"><span class="footer__languageLink">ENG</span><span>|</span><span class="footer__languageLink">SRB</span></div>
+    </section>
+  </footer>
 </body>
 
 </html>

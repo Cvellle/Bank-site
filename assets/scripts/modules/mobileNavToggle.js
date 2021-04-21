@@ -5,6 +5,7 @@ function mobileNavToggle() {
   const dropdown = document.querySelector(".header__dropdown");
   const dropdownToggle = document.querySelector(".transparent");
   const closeBtn = document.querySelector(".header__close");
+  const mobArrow = document.querySelector(".header__mobArrow");
 
   const navButtons = document.querySelectorAll(".header__navBtn--toggle");
   const screenWidthLimit = window.matchMedia("screen and (min-width: 1025px)");
@@ -16,8 +17,10 @@ function mobileNavToggle() {
       closeBtn.classList.toggle("header__close--visible");
     };
 
-    const toggleDropdown = () => {
+    const toggleDropdown = (e) => {
       dropdown.classList.toggle("header__dropdown--visible");
+      mobArrow.classList.toggle("header__mobArrow--rotated");
+      navBtn1.firstElementChild.classList.toggle("header__navBtn--activeBtn");
     };
 
     [...navButtons]

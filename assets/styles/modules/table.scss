@@ -1,0 +1,215 @@
+.table {
+  $this: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  justify-content: center;
+  padding: vwm(32) vwm(17) vwm(32) vwm(17);
+
+  @include desktop {
+    padding: vw(121) vw(0) vw(0) vw(0);
+  }
+
+  #{$this}__contentWrapper {
+    flex: 100%;
+
+    @include desktop {
+      flex: 0 0 vw(847);
+    }
+
+    #{$this}__example {
+      width: 100%;
+      border-bottom: 2px solid #e6e6e6;
+
+      #{$this}__button {
+        height: vwm(73);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: vwm(20);
+        font-weight: 600;
+        color: #686b6e;
+
+        @include desktop {
+          cursor: pointer;
+          height: vw(64);
+          font-size: vw(18);
+          padding-left: vw(316);
+        }
+
+        & span {
+          height: vwm(18);
+          display: inline-block;
+          @include desktop {
+            height: vw(18);
+          }
+        }
+
+        &--1 {
+          border-top: 2px solid #e6e6e6;
+        }
+
+        #{$this}__dropImg {
+          background: url("../images/icons/General/reddropdown.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: vwm(12);
+          width: vwm(22);
+          transition: 0.5s;
+
+          @include desktop {
+            height: vw(12);
+            width: vw(22);
+            margin-right: vw(10);
+          }
+
+          &--rotated {
+            @include transform(rotate(180deg));
+            transition: 0.5s;
+          }
+        }
+      }
+
+      #{$this}__togglingDiv {
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+
+        & h3 {
+          font-size: vwm(19);
+          color: #4a4a4a;
+          margin-bottom: vwm(13);
+
+          @include desktop {
+            margin-top: vw(51 - 23 - 2);
+            height: vw(41);
+            font-weight: 500;
+            font-size: vw(19);
+            width: vw(457);
+            text-align: center;
+            display: block;
+            margin-left: vw(145);
+          }
+        }
+
+        & h4 {
+          font-size: vwm(13);
+          color: #686b6e;
+          font-weight: bold;
+          text-align: center;
+          margin-top: vwm(16);
+          margin-bottom: vwm(12);
+
+          @include desktop {
+            margin-top: vw(16);
+            margin-bottom: vw(10);
+            font-size: vw(19);
+            height: vw(17);
+          }
+        }
+
+        #{$this}__content {
+          height: vwm(31);
+          padding-left: vwm(12);
+          padding-right: vwm(13);
+          font-size: vwm(14);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #686b6e;
+
+          @include desktop {
+            height: vw(44);
+            font-size: vw(17);
+            padding-left: vw(19);
+            padding-right: vw(20);
+          }
+
+          &:nth-child(even) {
+            background: #f7f7f7;
+          }
+
+          &:nth-child(11) {
+            margin-bottom: vwm(31 - 13);
+
+            @include desktop {
+              margin-bottom: vw(33 - 17);
+            }
+
+            & span:first-child {
+              display: block;
+              flex: 0 0 vwm(179);
+
+              @include desktop {
+                flex: auto;
+              }
+            }
+          }
+
+          & span {
+            @include desktop {
+              height: vw(14);
+            }
+          }
+        }
+
+        & small {
+          height: vwm(12 + 9 + 12);
+          border-top: 2px solid #e6e6e6;
+          min-width: 100%;
+          display: flex;
+          align-items: flex-end;
+          color: #686b6e;
+          font-size: vwm(9);
+          padding-top: vwm(12);
+
+          @include desktop {
+            max-height: vw(13 + 8);
+            padding-top: 0;
+            font-size: vw(13);
+          }
+        }
+
+        #{$this}__closeDiv {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          color: #a6a6a6;
+          margin-bottom: vwm(17);
+
+          @include desktop {
+            margin-top: vw(29);
+            margin-bottom: vw(30);
+            width: 100%;
+            margin-left: vw(49.5);
+          }
+
+          #{$this}__closeBtn {
+            width: vwm(14);
+            height: vwm(14);
+            margin-left: vwm(17);
+            background: url("../images/icons/General/x.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include desktop {
+              width: vw(14);
+              height: vw(14);
+              margin-left: vw(11);
+            }
+          }
+
+          & span {
+            @include desktop {
+              height: vw(11);
+              display: flex;
+              align-items: center;
+              font-size: vw(13);
+            }
+          }
+        }
+      }
+    }
+  }
+}

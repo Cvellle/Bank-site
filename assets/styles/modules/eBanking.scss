@@ -217,10 +217,11 @@
     & p {
       font-size: vwm(14.5);
       margin-top: (26vw / 3.75);
+      color: #7e8083;
+      line-height: vwm(21);
 
       @include desktop {
         line-height: vw(24);
-        color: #686b6e;
         margin-top: vw(29);
         min-width: unset;
         text-align: left;

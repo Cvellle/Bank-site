@@ -1,0 +1,339 @@
+.footer {
+  $this: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include desktop {
+    padding: vw(121) vw(0) vw(0) vw(0);
+  }
+
+  #{$this}__map {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: vwm(238);
+    position: relative;
+    background: #000;
+
+    @include desktop {
+      flex: 0 0 50%;
+      height: vw(328);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: blue;
+      //   background: url(../images/ebanking1.jpeg);
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    & h2 {
+      font-weight: 500;
+      position: relative;
+      font-size: vwm(21);
+      color: #ffffff;
+      z-index: 3;
+
+      @include desktop {
+        font-size: vw(32);
+      }
+    }
+
+    & button {
+      border-radius: vwm(28);
+      margin-top: vwm(16);
+      position: relative;
+      width: vwm(249);
+      height: vwm(60);
+      background: #ffffff;
+      color: #e60028;
+      font-size: vwm(15);
+      z-index: 3;
+
+      @include desktop {
+        width: vw(249);
+        height: vw(60);
+        font-size: vw(16);
+        margin-top: vw(30);
+      }
+    }
+  }
+
+  #{$this}__online {
+    position: relative;
+    background: #000;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: vwm(290);
+
+    @include desktop {
+      flex: 0 0 50%;
+      height: vw(328);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //   background: blue;
+      //   background: url(../images/ebanking1.jpeg);
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    & h2 {
+      font-weight: 500;
+      position: relative;
+      font-size: vwm(21);
+      color: #ffffff;
+      z-index: 3;
+      text-align: center;
+
+      @include desktop {
+        font-size: vw(32);
+      }
+    }
+
+    & button {
+      border-radius: vwm(28);
+      margin-top: vwm(16);
+      position: relative;
+      width: vwm(198);
+      height: vwm(60);
+      background: #ffffff;
+      color: #e60028;
+      font-size: vwm(15);
+      z-index: 3;
+
+      @include desktop {
+        width: vw(198);
+        height: vw(60);
+        font-size: vw(16);
+        margin-top: vw(30);
+      }
+    }
+  }
+
+  #{$this}__career {
+    position: relative;
+    background: rgb(229, 226, 226);
+    flex: 0 0 100%;
+    height: vwm(421);
+    padding: vwm(119) vwm(31) vwm(82) vwm(31);
+
+    @include desktop {
+      flex: 0 0 vw(508);
+      padding: vw(0) vw(0) vw(0) vw(50);
+      height: vw(529);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //   background: blue;
+      //   background: url(../images/ebanking1.jpeg);
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    #{$this}__textDiv {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 0 100%;
+
+      @include desktop {
+        justify-content: unset;
+        flex: 0 0 vw(409);
+        align-content: flex-start;
+      }
+
+      & h2 {
+        font-size: (20vw / 3.75);
+        max-width: (217vw / 3.75);
+        margin-top: (15vw / 3.75);
+        min-width: 100%;
+
+        @include desktop {
+          margin-top: vw(75);
+          text-align: unset;
+          padding: 0;
+          font-size: vw(30);
+          max-height: vw(30);
+          font-weight: 500;
+          line-height: unset;
+        }
+      }
+
+      & p {
+        font-size: vwm(14.5);
+        margin-top: (26vw / 3.75);
+        color: #7e8083;
+
+        @include desktop {
+          line-height: vw(24);
+          margin-top: vw(29);
+          min-width: unset;
+          text-align: left;
+          width: (467% / 5.26);
+          font-size: vw(16);
+        }
+
+        & span {
+          display: none;
+
+          @include desktop {
+            display: inline;
+          }
+        }
+      }
+
+      #{$this}__btn {
+        cursor: pointer;
+        color: #e60028;
+        font-size: (16vw / 3.75);
+        margin-top: (36vw / 3.75);
+        margin-right: auto;
+
+        @include desktop {
+          margin-top: vw(25);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-size: vw(16);
+          font-weight: 500;
+          line-height: vw(24);
+          color: #e60028;
+        }
+
+        &:hover {
+          color: rgb(177, 174, 174);
+          transition: 0.5s;
+        }
+
+        #{$this}__imgDiv {
+          width: vwm(20);
+          height: vwm(10);
+          background: url("../images/icons/General/redArrow.svg");
+          display: inline-block;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @include desktop {
+            width: vw(14);
+            height: vw(11);
+            margin-left: vw(11);
+          }
+        }
+      }
+    }
+  }
+
+  #{$this}__links {
+    color: #a6a6a6;
+    font-size: vwm(14);
+    flex: 0 0 100%;
+    padding: vwm(44) vwm(0) vwm(44) vwm(51);
+
+    @include desktop {
+      flex: 0 0 100%;
+    }
+
+    #{$this}__linksWrapper {
+      position: relative;
+      height: vwm(270);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & a {
+        letter-spacing: vwm(1);
+      }
+    }
+  }
+
+  #{$this}__social {
+    padding: vwm(46) vwm(31) vwm(80) vwm(30);
+    flex: 0 0 100%;
+    color: #a6a6a6;
+    font-size: vwm(14);
+
+    @include desktop {
+      flex: 0 0 100%;
+    }
+
+    & > :first-child {
+      margin-left: vwm(21);
+    }
+  }
+
+  #{$this}__mobile {
+    flex: 0 0 100%;
+    height: vwm(280);
+    background: url("../images/mob1.png");
+    opacity: 0.4;
+    background-size: vwm(209) vwm(427);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+
+    @include desktop {
+      flex: 0 0 100%;
+    }
+  }
+
+  #{$this}__bottomSection {
+    padding: vwm(43) vwm(0) vwm(45) vwm(53);
+    flex: 0 0 100%;
+    color: #a6a6a6;
+    font-size: vwm(14);
+
+    @include desktop {
+      flex: 0 0 100%;
+    }
+
+    #{$this}__bottomLinks {
+      height: vwm(207);
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+
+      & > :last-child {
+        margin-top: vwm(3);
+      }
+    }
+
+    #{$this}__languages {
+      margin-top: vwm(30);
+      color: #7e8083;
+      font-size: vwm(15);
+      width: vwm(80);
+      display: flex;
+      justify-content: space-between;
+
+      & span:active:not(:nth-child(2)) {
+        color: #e60028;
+      }
+    }
+  }
+}

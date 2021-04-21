@@ -297,6 +297,28 @@
               & > a {
                 border: none;
                 outline: none;
+                color: #808080;
+                @include desktop {
+                  color: #7e8083;
+                }
+
+                &:hover {
+                  color: #ffffff;
+                  @include desktop {
+                    color: #e50229;
+                  }
+                }
+
+                &:active {
+                  color: #ffffff;
+                  @include desktop {
+                    color: #e50229;
+                  }
+                }
+
+                @include desktop {
+                  font-size: vw(14);
+                }
               }
 
               &:not(:first-child) > a {
@@ -345,6 +367,39 @@
           @include desktop {
             margin-left: vw(71);
           }
+
+          border-top: 1px solid gray;
+
+          @include desktop {
+            padding-left: unset;
+            border-top: none;
+            border-left: none;
+          }
+
+          #{$this}__mobArrow {
+            height: vwm(9);
+            width: vwm(15);
+            background: url("../images/icons/Nav/mobArr.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: vwm(23);
+            transition: 0.5s;
+
+            @include desktop {
+              display: none;
+            }
+
+            &--rotated {
+              @include transform(rotate(180deg));
+            }
+          }
+        }
+
+        &--activeBtn {
+          border-left: vwm(6) solid red;
+          padding-left: vwm(10) !important;
         }
 
         &--2 {
@@ -377,15 +432,37 @@
           }
         }
 
-        &:first-child {
-          border-top: 1px solid gray;
-          border-left: 2vw solid red;
+        // #{$this}__navBtn--1 {
+        //   border-top: 1px solid gray;
+        //   border-left: vwm(6) solid red;
+        //   padding-left: vwm(10);
 
-          @include desktop {
-            border-top: none;
-            border-left: none;
-          }
-        }
+        //   @include desktop {
+        //     padding-left: unset;
+        //     border-top: none;
+        //     border-left: none;
+        //   }
+
+        //   & .activeBtn {
+        //     border-left: vwm(6) solid blue;
+        //   }
+
+        //   #{$this}__mobArrow {
+        //     height: vwm(9);
+        //     width: vwm(15);
+        //     background: url("../images/icons/Nav/mobArr.svg");
+        //     background-position: center;
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     margin-left: auto;
+        //     margin-right: vwm(23);
+        //     transition: 0.5s;
+
+        //     &--rotated {
+        //       @include transform(rotate(180deg));
+        //     }
+        //   }
+        // }
 
         @include desktop {
           flex: unset;
@@ -421,12 +498,12 @@
           }
 
           &:hover {
-            color: #f26522;
+            color: #e50027;
             transition: 0.3s;
           }
         }
 
-        &--quote {
+        &--big {
           display: none;
 
           @include desktop {

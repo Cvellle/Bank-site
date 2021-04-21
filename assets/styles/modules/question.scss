@@ -1,0 +1,310 @@
+.question {
+  $this: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  justify-content: center;
+  padding: vwm(32) vwm(17) vwm(32) vwm(17);
+
+  @include desktop {
+    padding: vw(121) vw(0) vw(0) vw(0);
+  }
+
+  & h2 {
+    flex: 0 0 100%;
+    font-size: vwm(18);
+    text-align: center;
+    color: #4a4a4a;
+
+    @include desktop {
+      font-size: vw(32);
+      line-height: vw(32);
+      font-weight: 500;
+      height: (36vw /19.2);
+    }
+  }
+
+  & h3 {
+    flex: 0 0 vwm(302);
+    font-size: vwm(16);
+    text-align: center;
+    color: #686b6e;
+    margin-top: vwm(14);
+    font-weight: 300;
+
+    @include desktop {
+      font-size: vw(19);
+      line-height: vw(24);
+      font-weight: 300;
+      height: vw(44);
+      max-width: vw(697);
+      margin-top: vw(30);
+      margin-left: 20vw;
+      margin-right: 20vw;
+    }
+  }
+
+  #{$this}__form {
+    margin-top: vwm(62);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include desktop {
+      margin-top: vw(136);
+      width: vw(722);
+    }
+  }
+
+  #{$this}__email {
+    font-size: vwm(15);
+    line-height: vwm(24);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    & span {
+      color: #7e8083;
+      font-size: vw(19);
+      letter-spacing: vw(1);
+      line-height: vw(18);
+      height: vw(18);
+      color: #7e8083;
+      display: block;
+      flex: 100%;
+
+      @include desktop {
+        color: #7e8083;
+        font-size: vw(19);
+        letter-spacing: vw(1);
+        line-height: vw(18);
+        height: vw(18);
+        color: #7e8083;
+        display: block;
+        flex: 100%;
+      }
+    }
+
+    #{$this}__emailWrapper {
+      margin-top: vwm(25);
+      font-size: vwm(15);
+      line-height: vwm(24);
+      height: vwm(45);
+      width: 100%;
+
+      @include desktop {
+        margin-top: vw(24 - 19);
+        height: vw(19 + 20 + 19);
+      }
+
+      & input {
+        color: #000001;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid#d9d9d9;
+        overflow: auto;
+        display: block;
+
+        @include desktop {
+          font-size: vw(22);
+        }
+      }
+    }
+  }
+
+  #{$this}__message {
+    font-size: vwm(15);
+    line-height: vwm(24);
+    margin-top: vwm(48);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex: 0 0 100%;
+
+    @include desktop {
+      margin-top: vw(52);
+    }
+
+    & span {
+      color: #7e8083;
+
+      @include desktop {
+        color: #7e8083;
+        font-size: vw(19);
+        letter-spacing: vw(1);
+        line-height: vw(18);
+        height: vw(18);
+        color: #7e8083;
+        display: block;
+        flex: 100%;
+      }
+    }
+
+    #{$this}__textareaWrapper {
+      margin-top: vwm(25);
+      height: vwm(160);
+      flex: 0 0 100%;
+
+      @include desktop {
+        margin-top: vw(24);
+        height: vw(22 + 83 + 22);
+      }
+
+      & textarea {
+        color: #000000;
+        font-size: vwm(15);
+        height: 100%;
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 3px solid#d9d9d9;
+        resize: none;
+
+        @include desktop {
+          font-size: vw(22);
+          padding-bottom: vw(21);
+        }
+      }
+    }
+  }
+
+  #{$this}__checkboxWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: vwm(21);
+
+    @include desktop {
+      flex: 0 0 auto;
+      margin-right: 0;
+      margin-top: 0;
+      height: vw(19);
+      margin-top: vw(61);
+    }
+
+    & input {
+      position: relative;
+      width: vwm(15);
+      overflow: visible;
+      height: vwm(15);
+      margin-right: auto;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+
+      @include desktop {
+        width: vw(17);
+        height: vw(17);
+        margin-left: vw(13);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border: 1px solid #cccccc;
+        border-radius: vwm(2);
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        overflow: visible;
+        z-index: 1;
+
+        @include desktop {
+          border-radius: vw(2);
+        }
+      }
+
+      &:checked::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border: 1px solid #cccccc;
+        border-radius: vwm(2);
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        overflow: visible;
+
+        @include desktop {
+          border-radius: vw(2);
+        }
+      }
+
+      &:checked::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: vwm(21);
+        height: 100%;
+        background: url("../images/icons/General/check.svg");
+        border-radius: vwm(2);
+        background-size: vwm(16) vwm(12);
+        background-repeat: no-repeat;
+        background-position: vwm(4) 0;
+        border: none;
+        overflow: visible;
+        z-index: 3;
+
+        @include desktop {
+          background-size: vw(18) vw(14);
+          background-position: vw(5) vw(1);
+          border-radius: vw(2);
+        }
+      }
+    }
+
+    & label {
+      color: #686b6e;
+      font-size: vwm(13);
+      margin-left: vwm(19);
+
+      @include desktop {
+        font-size: vw(14);
+        margin-left: vw(21);
+      }
+    }
+  }
+
+  #{$this}__submitBtn {
+    background: #e60028;
+    width: vwm(251);
+    height: vwm(48);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: #ffffff;
+    margin-top: vwm(45);
+    font-size: vwm(17);
+    font-weight: 600;
+
+    @include desktop {
+      display: inline-block;
+      flex: 0 0 vw(284);
+      height: vw(54);
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: vw(48);
+      font-size: vw(18);
+      letter-spacing: vw(1);
+      font-weight: 500;
+      border-radius: vw(3);
+    }
+  }
+}
