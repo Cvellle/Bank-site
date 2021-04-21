@@ -4,3 +4,4 @@ import "../scripts/modules/toggleBenefits.js";
 import "../scripts/modules/eBankingSlider.js";
 import "../scripts/modules/coverSlider.js";
 import "../scripts/modules/toggleTables.js";
+import "../scripts/modules/footerGrasp.js";

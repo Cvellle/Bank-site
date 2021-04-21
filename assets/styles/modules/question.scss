@@ -71,10 +71,10 @@
 
     & span {
       color: #7e8083;
-      font-size: vw(19);
+      font-size: vwm(15);
       letter-spacing: vw(1);
-      line-height: vw(18);
-      height: vw(18);
+      line-height: vwm(18);
+      height: vwm(18);
       color: #7e8083;
       display: block;
       flex: 100%;
@@ -110,6 +110,7 @@
         border-bottom: 3px solid#d9d9d9;
         overflow: auto;
         display: block;
+        font-size: vwm(15);
 
         @include desktop {
           font-size: vw(22);

@@ -333,6 +333,7 @@
   }
 
   #{$this}__mobile {
+    position: relative;
     flex: 0 0 100%;
     height: vwm(280);
     background: url("../images/mob1.png");
@@ -340,10 +341,13 @@
     background-size: vwm(209) vwm(427);
     background-repeat: no-repeat;
     background-position: 50% 0%;
+    @include transform(translatey(vwm(300)));
+    z-index: -1;
 
     @include desktop {
       flex: 1 0 auto;
       height: vw(529);
+      @include transform(translatey(vw(500)));
     }
   }
 
@@ -352,6 +356,7 @@
     flex: 0 0 100%;
     color: #a6a6a6;
     font-size: vwm(14);
+    background: #ffffff;
 
     @include desktop {
       flex: 0 0 100%;

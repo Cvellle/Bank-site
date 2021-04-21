@@ -143,8 +143,8 @@
     }
 
     #{$this}__navButtons {
-      align-items: center;
-      align-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -155,10 +155,9 @@
       min-width: 100%;
       padding: 0 0 2vw 0;
       @include transform(translateX(100vw));
+      height: calc(100vh - (36vw / 3.8));
 
       @include desktop {
-        align-items: flex-start;
-        align-content: flex-start;
         background-color: unset;
         height: unset;
         position: relative;
@@ -431,38 +430,6 @@
             margin-left: vw(114);
           }
         }
-
-        // #{$this}__navBtn--1 {
-        //   border-top: 1px solid gray;
-        //   border-left: vwm(6) solid red;
-        //   padding-left: vwm(10);
-
-        //   @include desktop {
-        //     padding-left: unset;
-        //     border-top: none;
-        //     border-left: none;
-        //   }
-
-        //   & .activeBtn {
-        //     border-left: vwm(6) solid blue;
-        //   }
-
-        //   #{$this}__mobArrow {
-        //     height: vwm(9);
-        //     width: vwm(15);
-        //     background: url("../images/icons/Nav/mobArr.svg");
-        //     background-position: center;
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-        //     margin-left: auto;
-        //     margin-right: vwm(23);
-        //     transition: 0.5s;
-
-        //     &--rotated {
-        //       @include transform(rotate(180deg));
-        //     }
-        //   }
-        // }
 
         @include desktop {
           flex: unset;
