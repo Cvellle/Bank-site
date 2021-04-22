@@ -33,10 +33,12 @@
     justify-content: flex-start;
     margin-top: vwm(50);
     flex: 0 0 100%;
+    margin-bottom: vwm(15);
 
     @include desktop {
       font-size: 0.78vw;
       margin: 0 vw(62/2);
+      margin-bottom: unset;
     }
 
     &--1 {
@@ -90,6 +92,49 @@
       }
     }
 
+    #{$this}__hoverWrapper {
+      position: relative;
+
+      #{$this}__hovered1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: #e60028;
+        opacity: 0.8;
+        display: none;
+
+        &--shown {
+          display: block;
+        }
+      }
+
+      #{$this}__hovered2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background: url("../images/icons/General/2/Link.svg");
+        background-size: vwm(31) vwm(29);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        display: none;
+
+        @include desktop {
+          background-size: vw(31) vw(29);
+        }
+
+        &--shown {
+          display: block;
+        }
+      }
+    }
+
     #{$this}__imageWrapper {
       position: relative;
       height: (180vw / 3.8);
@@ -113,7 +158,7 @@
       font-size: vwm(17);
       flex: 1 0 100%;
       font-weight: 700;
-      margin-top: (17vw / 3.75);
+      margin-top: (23vw / 3.8);
 
       @include desktop {
         font-size: vw(21.5);
@@ -146,7 +191,7 @@
       cursor: pointer;
       color: #e60028;
       font-size: (16vw / 3.75);
-      margin-top: (36vw / 3.75);
+      margin-top: (20vw / 3.8);
       margin-right: auto;
 
       @include desktop {

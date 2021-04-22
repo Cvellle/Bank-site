@@ -5,13 +5,11 @@ $(document).ready(function () {
     const iconsHoverIn = function () {
       TweenMax.to($(this).find(".header__mobArrow"), 0.3, {
         rotationX: "-180",
-        opacity: 1,
       });
     };
     const iconsHoverOut = function () {
       TweenMax.to($(this).find(".header__mobArrow"), 0.3, {
         rotationX: 0,
-        opacity: 1,
       });
     };
     $(".header__dropDownDiv").hover(iconsHoverIn, iconsHoverOut);

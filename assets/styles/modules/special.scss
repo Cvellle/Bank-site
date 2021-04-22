@@ -82,12 +82,15 @@
     }
   }
 
-  &__article {
+  #{$this}__article {
+    opacity: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 80%;
     border: 1px solid lightgray;
+    @include transform(translatey(100%));
+    transition: 1s;
 
     @include desktop {
       font-size: 0.78vw;
@@ -97,6 +100,12 @@
       max-width: vw(482);
       height: vw(548);
       flex: 0 0 vw(482);
+    }
+
+    &--visible {
+      @include transform(translatey(0%));
+      opacity: 1;
+      transition: 1s;
     }
 
     &--1 {

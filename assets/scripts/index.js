@@ -5,5 +5,7 @@ import "../scripts/modules/eBankingSlider.js";
 import "../scripts/modules/coverSlider.js";
 import "../scripts/modules/toggleTables.js";
 import "../scripts/modules/footerGasp.js";
-import "../scripts/modules/scrollToTpGasp.js";
+import "../scripts/modules/scrollToTop.js";
 import "../scripts/modules/headerArrowGasp.js";
+import "../scripts/modules/magazineHover.js";
+import "../scripts/modules/specialScroll.js";
