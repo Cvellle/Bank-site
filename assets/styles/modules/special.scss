@@ -100,6 +100,8 @@
       max-width: vw(482);
       height: vw(548);
       flex: 0 0 vw(482);
+      position: relative;
+      z-index: 50;
     }
 
     &--visible {

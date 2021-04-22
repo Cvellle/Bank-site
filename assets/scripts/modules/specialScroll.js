@@ -2,7 +2,7 @@ $(document).ready(function () {
   const $box = $("#mobileDiv > div");
   let a = false;
   let b = false;
-  const startAt = $(window).height() / 2.5;
+  const startAt = $(window).height() / 3;
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > startAt) {

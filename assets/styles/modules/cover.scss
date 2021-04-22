@@ -144,6 +144,11 @@
       background-color: #ffffff;
       transition: 0.7s;
 
+      &:hover {
+        opacity: 0.85;
+        transition: 0.7s;
+      }
+
       @include desktop {
         margin-top: vw(34);
         margin-left: vw(121);
