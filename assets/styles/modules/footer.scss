@@ -32,6 +32,7 @@
       height: vwm(238);
       position: relative;
       background: url("../images/mapa.jpg");
+      background-size: 100% 100%;
 
       @include desktop {
         flex: 0 0 50%;
@@ -97,6 +98,7 @@
 
       @include desktop {
         background: url("../images/online.jpg");
+        background-size: 100% 100%;
       }
 
       @include desktop {
@@ -205,6 +207,21 @@
           background-size: vw(16) vw(19);
           background-repeat: no-repeat;
           background-position: 50%;
+        }
+
+        #{$this}__returnText {
+          display: none;
+
+          @include desktop {
+            display: block;
+            position: absolute;
+            bottom: vw(-30 - 14);
+            min-width: 200%;
+            left: -50%;
+            text-align: center;
+            height: vw(30);
+            line-height: vw(17);
+          }
         }
       }
     }

@@ -94,6 +94,12 @@
 
     #{$this}__hoverWrapper {
       position: relative;
+      height: vwm(180);
+
+      @include desktop {
+        cursor: pointer;
+        height: vw(205);
+      }
 
       #{$this}__hovered1 {
         position: absolute;
@@ -126,6 +132,7 @@
         display: none;
 
         @include desktop {
+          height: vw(205);
           background-size: vw(31) vw(29);
         }
 
@@ -137,7 +144,7 @@
 
     #{$this}__imageWrapper {
       position: relative;
-      height: (180vw / 3.8);
+      height: vwm(180);
       width: (318vw / 3.8);
 
       @include desktop {
@@ -151,6 +158,11 @@
         position: relative;
         z-index: 1;
         min-width: 100%;
+        height: vwm(180);
+
+        @include desktop {
+          height: vw(205);
+        }
       }
     }
 
