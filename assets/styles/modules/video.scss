@@ -17,6 +17,8 @@
     margin-top: vwm(46);
     z-index: 0;
     cursor: pointer;
+    width: vwm(340);
+    height: vwm(205);
 
     @include desktop {
       margin-top: unset;
@@ -39,8 +41,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("../images/icons/General/play.svg");
-      opacity: 0.4;
+      background: url("../images/icons/General/2/play.svg");
       background-size: 20%;
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -70,11 +71,12 @@
       @include desktop {
         margin-top: vw(58);
         text-align: unset;
-        width: 100%;
+        width: vw(379);
         font-size: vw(32);
         color: #e6e6e6;
         font-weight: 500;
         height: vw(69);
+        line-height: vw(39);
       }
 
       span {
@@ -98,7 +100,8 @@
         color: #e6e6e6;
         height: vw(134);
         align-content: center;
-        line-height: vw(24);
+        line-height: vw(23.9);
+        display: flex;
       }
 
       & span {
@@ -128,14 +131,14 @@
       }
 
       &:hover {
-        color: rgb(177, 174, 174);
+        opacity: 0.7;
         transition: 0.5s;
       }
 
       #{$this}__imgDiv {
         width: vwm(20);
         height: vwm(10);
-        background: url("../images/icons/General/redArrow.svg");
+        background: url("../images/icons/General/red.png");
         display: inline-block;
         background-size: contain;
         background-repeat: no-repeat;

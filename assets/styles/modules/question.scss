@@ -6,6 +6,7 @@
   flex: 0 0 100%;
   justify-content: center;
   padding: vwm(32) vwm(17) vwm(32) vwm(17);
+  background: #ffffff;
 
   @include desktop {
     padding: vw(121) vw(0) vw(0) vw(0);
@@ -278,6 +279,7 @@
 
       @include desktop {
         font-size: vw(14);
+        cursor: pointer;
         margin-left: vw(21);
       }
     }
@@ -306,6 +308,7 @@
       letter-spacing: vw(1);
       font-weight: 500;
       border-radius: vw(3);
+      cursor: pointer;
     }
   }
 }

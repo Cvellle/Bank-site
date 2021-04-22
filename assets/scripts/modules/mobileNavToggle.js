@@ -6,7 +6,6 @@ function mobileNavToggle() {
   const dropdownToggle = document.querySelector(".transparent");
   const closeBtn = document.querySelector(".header__close");
   const mobArrow = document.querySelector(".header__mobArrow");
-
   const navButtons = document.querySelectorAll(".header__navBtn--toggle");
   const screenWidthLimit = window.matchMedia("screen and (min-width: 1025px)");
 

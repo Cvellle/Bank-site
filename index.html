@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
+  <title>Degordian task</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
@@ -12,51 +12,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <body>
-  <section class="topNavigation" id="home">
+  <div class="topNavigation" id="home">
     <div class="topNavigation__contenWrapper">
-      <span class="topNavigation__support">
-        <figure>
-          <embed src="./assets/images/icons/Nav/podrska.svg" alt="podrska" />
-        </figure>
+      <div class="topNavigation__support">
+        <div class="topNavigation__supportImg"></div>
         <span class="topNavigation__supportText">
           Korisnički centar
         </span>
-        <a href="tel:011 30 11 555">011 30 11 555</a>
-      </span>
-      <span class="topNavigation__eBanking">
+        <a href="tel:+381113011555">011 30 11 555</a>
+      </div>
+      <div class="topNavigation__eBanking">
         <span>Budimo u kontaktu</span>
         <div class="topNavigation__social topNavigation__social--1"></div>
         <div class="topNavigation__social topNavigation__social--2"></div>
         <div class="topNavigation__social topNavigation__social--3"></div>
         <div class="topNavigation__social topNavigation__social--4"></div>
-        <span class="topNavigation__location">
+        <div class="topNavigation__location">
           <div class="topNavigation__locationImg"></div>
           <span>LOAKCIJE</span>
-        </span>
-        <span class="topNavigation__list">
+        </div>
+        <div class="topNavigation__list">
           <div class="topNavigation__listImg topNavigation__listImg--1"></div>
           <span>KURSNA LISTA</span>
-        </span>
-
+        </div>
         <span class="topNavigation__eBankingText">
           <span>ONLINE BANKING</span>
         </span>
-        <span class=" topNavigation__eBankingBtn">
+        <div class=" topNavigation__eBankingBtn">
           <span class="topNavigation__eBankingBtnText">
             on line banking
           </span>
-          <figure class="topNavigation__eBankingImgWrapper">
-            <embed src="./assets/images/icons/Hero slider/online banking icon.svg" alt="podrska" />
-          </figure>
-        </span>
-      </span>
+          <div class="topNavigation__eBankingImgWrapper"></div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
   <header class="header">
-    <nav class="header__nav" role="navigation">
+    <nav class="header__nav">
       <figure class="header__logoWrapper">
         <picture>
-          <source srcset="./assets/images/logo.png" media="(min-width: 370px)" />
+          <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
           <img class="header__logoImage" src="./assets/images/mobile/logo.png" alt="Societe generale" />
         </picture>
       </figure>
@@ -68,7 +63,7 @@
         <div class="header__simpleButtonsDiv">
           <div class="header__dropDownDiv">
             <a href="#home" class="header__navBtn header__navBtn--toggle header__navBtn--1">
-              <span>STANOVNIŠTVO</span>
+              <span class="navToggler">STANOVNIŠTVO</span>
               <div class="header__mobArrow header__mobArrow--rotated"></div>
             </a>
             <div class="dropdownToggle">
@@ -98,7 +93,7 @@
             <span>MAGAZIN</span>
           </a>
         </div>
-        <a href="#request-quote" role="link"
+        <a href="#request-quote"
           class="header__navBtn header__navBtn--toggle header__navBtn--big header__navBtn--6" tabindex="0">
           Online banking
         </a>
@@ -120,9 +115,9 @@
     </nav>
   </header>
   <main>
-    <section class="mainScreen">
+    <section class="cover">
       <div class="contentWrapper">
-        <div class="mainScreen__textDiv">
+        <div class="cover__textDiv">
           <h1>Stanovništvo</h1>
           <p>
             <span class="desktop">
@@ -139,35 +134,37 @@
               korišćenje bezgotovinskog plaćanja i usluge elektronskog bankarstva. U nama ćete naći pravog partnera!
             </span>
           </p>
-          <div class="mainScreen__btn">
+          <div class="cover__btn">
             <span>
-              Izračunaj svoju ratu
+              Zakažite sastanak
             </span>
-            <div class="mainScreen__btnImg">
+            <div class="cover__btnImg">
             </div>
           </div>
         </div>
-        <div class="mainScreen__carousel">
-          <figure class="cover__arrow cover__arrow--left leftArrow">
-            <embed src="./assets/images/icons/Hero slider/arrow left.svg" alt="" aria-hidden="true" />
-          </figure>
-          <figure class="cover__arrow cover__arrow--right rightArrow">
-            <embed src="./assets/images/icons/Hero slider/arrow right.svg" alt="" aria-hidden="true" />
-          </figure>
-          <div class="mainScreen__carouselItem opacity0 first">
-            <figure class="cover__imgWrapper">
-              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-            </figure>
+        <div class="cover__carousel">
+          <div class="cover__arrow cover__arrow--left leftArrow"></div>
+          <div class="cover__arrow cover__arrow--right rightArrow"></div>
+          <div class="cover__carouselItem opacity0 first">
+            <figure class="cover__imgWrapper">  <source srcset="./assets/images/mob/coverM.jpg" media="(min-width: 1024px)" />
+              <picture>    <source srcset="./assets/images/cover.jpg" media="(min-width: 1024px)" />
+                <img src="./assets/images/mobile/coverM.jpg" alt="" aria-hidden="true" />
+              </picture>
+            </figure>               
           </div>
-          <div class="mainScreen__carouselItem opacity0">
-            <figure class="cover__imgWrapper">
-              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-            </figure>
+          <div class="cover__carouselItem opacity0">
+            <figure class="cover__imgWrapper">  <source srcset="./assets/images/mob/coverM.jpg" media="(min-width: 1024px)" />
+              <picture>    <source srcset="./assets/images/cover.jpg" media="(min-width: 1024px)" />
+                <img src="./assets/images/mobile/coverM.jpg" alt="" aria-hidden="true" />
+              </picture>
+            </figure> 
           </div>
-          <div class="mainScreen__carouselItem opacity0">
-            <figure class="cover__imgWrapper">
-              <img src="./assets/images/logo2.png" alt="" aria-hidden="true" />
-            </figure>
+          <div class="cover__carouselItem opacity0">
+            <figure class="cover__imgWrapper">  <source srcset="./assets/images/mob/coverM.jpg" media="(min-width: 1024px)" />
+              <picture>    <source srcset="./assets/images/cover.jpg" media="(min-width: 1024px)" />
+                <img src="./assets/images/mobile/coverM.jpg" alt="" aria-hidden="true" />
+              </picture>
+            </figure> 
           </div>
         </div>
         <div class="indicatorsDiv">
@@ -177,7 +174,7 @@
         </div>
       </div>
     </section>
-    <section class="special" id="blog">
+    <div class="special">
       <article class="special__article special__article--1">
         <div class="special__first">
           <h4>Iznenađujuće povoljni keš kredit</h4>
@@ -187,7 +184,7 @@
             žiranata i vezanosti kredita za stranu valutu!
           </p>
           <div class="special__btn">
-            Izračunaj svoju ratu
+            <span>Izračunaj svoju ratu</span>
             <span class="special__btnImg">
             </span>
           </div>
@@ -210,7 +207,7 @@
             Fiksna ili varijabilna, odaberite sami nakon svake 3 godine otplate kredita.
           </p>
           <div class="special__btn">
-            Izračunaj svoju ratu
+            <span>Izračunaj svoju ratu</span>
             <span class="special__btnImg">
             </span>
           </div>
@@ -224,8 +221,8 @@
           </button>
         </div>
       </article>
-    </section>
-    <section class="benefits" id="blog">
+    </div>
+    <section class="benefits">
       <hgroup class="benefits__titlesGroup">
         <h2>
           Izdvojili smo za vas još vrlo
@@ -276,7 +273,7 @@
         </p>
       </article>
     </section>
-    <section class="video" id="about">
+    <div class="video">
       <article class="video__textDiv">
         <h2>M-banking, da vam banka uvek bude pri ruci</h2>
         <p class="video__bodyText">
@@ -284,19 +281,19 @@
           besplatne mobilne aplikacije, proverite stanje i prebacujte sredstva između svojih računa, plaćajte račune bez
           provizije, novac menjajte po povoljnijem kursu 24/7 i još mnogo toga.
         </p>
-        <biv class="video__btn" role="link" tabindex="0">
+        <div class="video__btn" role="link" tabindex="0">
           <span>
             Saznaj više
           </span>
           <div class="video__imgDiv"></div>
-        </biv>
+        </div>
       </article>
       <div class="video__imgWrapper">
         <video class="" poster="./assets/images/video.jpeg">
-          <source src="" type="video/mp4">
+          <source src="#" type="video/mp4">
         </video>
       </div>
-    </section>
+    </div>
     <section class="eBanking">
       <div class="eBanking__textDiv">
         <h2>E-banking, banka na klik!</h2>
@@ -313,11 +310,11 @@
           <div class="eBanking__imgDiv"></div>
         </div>
       </div>
-      <div class="eBanking__slider" aria-label="slider">
+      <div class="eBanking__slider">
         <span class="eBanking__arrow eBanking__arrow--left tabFocus" role="button" tabindex="0"></span>
         <span class="eBanking__arrow eBanking__arrow--right tabFocus" role="button" tabindex="0"></span>
         <div class="eBanking__imagesContainer">
-          <ul class="eBanking__imagesSlidingRow eBanking__imagesSlidingRow--position1">
+          <div class="eBanking__imagesSlidingRow eBanking__imagesSlidingRow--position1">
             <figure class="eBanking__imgWrapper">
               <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
             </figure>
@@ -330,9 +327,9 @@
             <figure class="eBanking__imgWrapper">
               <img src="./assets/images/ebanking1.jpeg" alt="" aria-hidden="true" />
             </figure>
-          </ul>
+          </div>
         </div>
-        <nav class="eBanking__sliderNav" role="navigation">
+        <nav class="eBanking__sliderNav">
           <div class="eBanking__sliderBtn eBanking__sliderBtn--active tabFocus eBanking__sliderBtn--activeBtn"
             role="button" tabindex="0"></div>
           <div class="eBanking__sliderBtn tabFocus" role="button"></div>
@@ -341,16 +338,16 @@
         </nav>
       </div>
     </section>
-    <section class="magazine" id="blog">
+    <section class="magazine">
       <h2>
         SoGe magazin
       </h2>
       <article class="magazine__article magazine__article--1">
         <h3>ONLINE KREDIT</h3>
-        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+        <figure class="magazine__imageWrapper">
           <picture>
-            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-            <img src="./assets/images/mobile/logo.png" alt="Development" />
+            <source srcset="./assets/images/magazin1.jpg" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/magazinM1.jpg" alt="Development" />
           </picture>
         </figure>
         <h4>Zašto je strpljenje jedna od ključnih karakteristika dobrog <span>menadžera</span></h4>
@@ -369,10 +366,10 @@
       <article class="magazine__article magazine__article--2">
         <h3>INVESTICIONO BANKARSTVO
         </h3>
-        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+        <figure class="magazine__imageWrapper">
           <picture>
-            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-            <img src="./assets/images/mobile/logo.png" alt="Development" />
+            <source srcset="./assets/images/magazin2.jpg" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/magazinM2.jpg" alt="Development" />
           </picture>
         </figure>
         <h4>Šta kada niste sigurni šta želite i kada imate kreativnu blokadu</h4>
@@ -389,10 +386,10 @@
       </article>
       <article class="magazine__article magazine__article--3">
         <h3>FAKTORING</h3>
-        <figure class="magazine__imageWrapper magazine__imageWrapper--megaphone">
+        <figure class="magazine__imageWrapper">
           <picture>
-            <source srcset="./assets/images/logo.png" media="(min-width: 1024px)" />
-            <img src="./assets/images/mobile/logo.png" alt="Development" />
+            <source srcset="./assets/images/magazin3.jpg" media="(min-width: 1024px)" />
+            <img src="./assets/images/mobile/magazinM3.jpg" alt="Development" />
           </picture>
         </figure>
         <h4>Moguća i štednja uz trošenje u societe generale banci</h4>
@@ -426,12 +423,12 @@
           <span>Postavite nam pitanje ili kratko opišite svoju
             sugestiju</span>
           <div class="question__textareaWrapper">
-            <textarea name="" cols="30" rows="10" class="question__textArea" maxlength="350"></textarea>
+            <textarea name="message" cols="30" rows="10" class="question__textArea" maxlength="350"></textarea>
           </div>
         </div>
         <div class="question__checkboxWrapper">
           <span></span>
-          <input type="checkbox" name="confirm" class="checked">
+          <input type="checkbox" name="confirm" id="confirm">
           <label for="confirm">Postavite nam pitanje ili kratko opišite svoju
             sugestiju</label>
         </div>
@@ -506,6 +503,7 @@
         <button>
           Saznaj više
         </button>
+        <div class="footer__returnImage"></div>
       </section>
     </div>
     <section class="footer__career">
@@ -523,7 +521,7 @@
         </div>
       </div>
     </section>
-    <section class="footer__links">
+    <div class="footer__links">
       <div class="footer__linksWrapper">
         <div><a href="" class="footer__link">STANOVNIŠTVO</a></div>
         <div><a href="" class="footer__link">MALI BIZNIS</a></div>
@@ -536,16 +534,21 @@
       </div>
       <div class="footer__social">
         <div><a href="">BUDIMO U KONTAKU</a></div>
-        <div class="footer__socialLinks"></div>
+        <div class="footer__socialLinks">
+          <div class="footer__socialLink footer__socialLink--1"></div>
+          <div class="footer__socialLink footer__socialLink--2"></div>
+          <div class="footer__socialLink footer__socialLink--3"></div>
+          <div class="footer__socialLink footer__socialLink--4"></div>
+        </div>
         <div class="footer__storeLinks">
           <div class="footer__storeLink footer__storeLink--1"></div>
           <div class="footer__storeLink footer__storeLink--2"></div>
           <div class="footer__storeLink footer__storeLink--3"></div>
         </div>
       </div>
-    </section>
-    <section class="footer__mobile" id="mobileDiv"></section>
-    <section class="footer__bottomSection">
+    </div>
+    <div class="footer__mobile" id="mobileDiv"><div></div></div>
+    <div class="footer__bottomSection">
       <div class="footer__bottomLinks">
        <div class="footer__leftLinks">
         <div><a href="" class="footer__bottomLink">PRAVNA REGULATIVA</a></div>
@@ -558,12 +561,14 @@
        </div>
       <div class="footer__languages"><span class="footer__languageLink">ENG</span><span>|</span><span class="footer__languageLink">SRB</span></div> 
     </div>
-    </section>
+  </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </body>
 
 </html>

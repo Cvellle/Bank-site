@@ -90,7 +90,7 @@
       width: vwm(23);
       height: vwm(21);
       margin-right: vwm(57);
-      background: url("../images/icons/Nav/search.svg");
+      background: url("../images/icons/Nav/2/search.svg");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -101,7 +101,9 @@
         height: vw(23);
         margin-right: unset;
         margin-left: vw(43);
+        cursor: pointer;
         margin-top: vw(55);
+        z-index: 20;
       }
     }
 
@@ -224,6 +226,11 @@
       }
 
       #{$this}__dropDownDiv {
+        @include desktop {
+          width: vw(92);
+          margin-left: vw(71);
+        }
+
         a {
           color: #ffffff;
           padding-left: vwm(16);
@@ -231,7 +238,6 @@
           @include desktop {
             padding-left: 0;
             color: #000;
-            padding-left: 0;
           }
         }
 
@@ -246,7 +252,7 @@
               top: 0;
               position: absolute;
               height: vw(24);
-              width: vw(236);
+              width: vw(92);
             }
           }
 
@@ -264,7 +270,7 @@
               top: vw(24);
               max-height: vw(371);
               font-size: vw(11);
-              margin-left: vw(71 - 28);
+              margin-left: vw(-28);
               padding: vw(32) vw(45) vw(30) vw(27);
               border-top: vw(4) solid #ff0000;
             }
@@ -363,16 +369,14 @@
         }
 
         &--1 {
-          @include desktop {
-            margin-left: vw(71);
-          }
-
           border-top: 1px solid gray;
 
           @include desktop {
+            position: relative;
             padding-left: unset;
             border-top: none;
             border-left: none;
+            width: vw(92);
           }
 
           #{$this}__mobArrow {
@@ -385,9 +389,14 @@
             margin-left: auto;
             margin-right: vwm(23);
             transition: 0.5s;
+            display: inline-block;
 
             @include desktop {
-              display: none;
+              height: vw(5);
+              width: vw(8);
+              position: absolute;
+              left: vw(92 + 10);
+              z-index: 5;
             }
 
             &--rotated {
@@ -486,6 +495,12 @@
             color: #ffffff;
             font-weight: bold;
             margin-top: vw(41);
+            transition: 0.5s;
+
+            &:hover {
+              transition: 0.5s;
+              opacity: 0.8;
+            }
           }
         }
       }

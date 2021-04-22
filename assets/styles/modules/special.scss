@@ -1,16 +1,14 @@
 .special {
   $this: &;
+
   $contentWidth: 1437 - 59 - 46;
   position: relative;
   z-index: 25;
-
+  background: #ffffff;
   display: flex;
   flex-wrap: wrap;
   flex: 0 0 100%;
   justify-content: center;
-
-  @include desktop {
-  }
 
   #{$this}__titlesGroup {
     align-content: flex-start;
@@ -64,7 +62,6 @@
 
       span {
         max-width: 70vw;
-        text-align: center;
 
         @include desktop {
           text-align: unset;
@@ -83,20 +80,6 @@
         text-align: center;
       }
     }
-
-    #{$this}__hideOnMob {
-      display: none;
-
-      @include desktop {
-        display: inline;
-      }
-    }
-
-    #{$this}__break {
-      @include desktop {
-        display: none;
-      }
-    }
   }
 
   &__article {
@@ -110,7 +93,10 @@
       font-size: 0.78vw;
       flex: 0 0 33%;
       width: vw(482);
+      min-width: vw(482);
+      max-width: vw(482);
       height: vw(548);
+      flex: 0 0 vw(482);
     }
 
     &--1 {
@@ -156,28 +142,35 @@
 
           @include desktop {
             margin-top: vw(22);
+            line-height: vw(23);
           }
         }
 
         #{$this}__btn {
           cursor: pointer;
           margin-top: vwm(29);
-          display: block;
+          display: flex;
           color: #e60028;
           display: flex;
+          transition: 0.7;
           align-items: center;
+          align-content: center;
 
           @include desktop {
-            position: absolute;
             font-size: vw(16);
-            line-height: vw(24);
             color: #e60028;
             font-weight: 500;
             margin-top: vw(63);
+            height: vw(16);
+          }
+
+          &:hover {
+            opacity: 0.7;
+            transition: 0.7;
           }
 
           #{$this}__btnImg {
-            background: url("../images/icons/General/redArrow.svg");
+            background: url("../images/icons/General/red.png");
             display: inline-block;
             background-size: contain;
             background-repeat: no-repeat;
@@ -186,8 +179,9 @@
             margin-left: 2vw;
 
             @include desktop {
-              height: vw(14);
+              height: vw(11);
               width: vw(14);
+              margin-left: vw(12);
             }
           }
         }
@@ -214,7 +208,8 @@
             margin-top: vw(55);
             max-width: vw(313);
             height: vw(36);
-            font-size: vw(13);
+            font-size: vw(14);
+            line-height: vw(18);
             color: #686b6e;
           }
         }
@@ -227,6 +222,10 @@
           font-size: vwm(14);
           margin-top: vwm(24);
           margin-bottom: vwm(54);
+
+          &:hover {
+            opacity: 0.7;
+          }
 
           @include desktop {
             margin-top: vw(69);
@@ -283,28 +282,30 @@
 
           @include desktop {
             margin-top: vw(26);
+            height: vw(85);
+            line-height: vw(23);
           }
         }
 
         #{$this}__btn {
-          cursor: pointer;
           margin-top: vwm(29);
-          display: block;
           color: #e60028;
           display: flex;
           align-items: center;
+          align-content: center;
 
           @include desktop {
-            font-size: vw(16);
-            line-height: vw(24);
+            font-size: vw(14);
             color: #e60028;
             font-weight: 500;
             margin-top: vw(38);
+            cursor: pointer;
+            height: vw(16);
           }
 
           #{$this}__btnImg {
-            background: url("../images/icons/General/redArrow.svg");
-            display: inline-block;
+            background: url("../images/icons/General/red.png");
+            display: inline-f;
             background-size: contain;
             background-repeat: no-repeat;
             height: vwm(15);
@@ -312,8 +313,17 @@
             margin-left: 2vw;
 
             @include desktop {
-              height: vw(14);
+              height: vw(11);
               width: vw(14);
+              margin-left: vw(12);
+              display: flex;
+              align-items: center;
+              margin-top: 0 !important;
+            }
+
+            &:hover {
+              opacity: 0.7;
+              transition: 0.7;
             }
           }
         }
@@ -350,7 +360,8 @@
             margin-top: vw(55);
             max-width: vw(313);
             height: vw(36);
-            font-size: vw(13);
+            font-size: vw(14);
+            line-height: vw(18);
             color: #686b6e;
           }
         }
@@ -364,13 +375,16 @@
           margin-top: vwm(24);
           margin-bottom: vwm(54);
 
+          &:hover {
+            opacity: 0.7;
+          }
+
           @include desktop {
             margin-top: vw(69);
             height: vw(54);
             width: vw(223);
             font-size: vw(16);
             letter-spacing: vw(0);
-            color: #ffffff;
             font-weight: 500;
           }
         }
@@ -379,14 +393,6 @@
 
     #{$this}__first {
       background: #f7f7f7;
-
-      & span {
-        display: none;
-
-        @include desktop {
-          display: inline;
-        }
-      }
 
       & p {
         flex: 0 100%;

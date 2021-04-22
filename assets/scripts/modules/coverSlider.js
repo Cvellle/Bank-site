@@ -1,7 +1,7 @@
 function mainScreen() {
   let seconds = 0;
   let i = 0;
-  const slides = document.querySelectorAll(".mainScreen__carouselItem");
+  const slides = document.querySelectorAll(".cover__carouselItem");
   const indicators = [...document.querySelectorAll(".indicator")];
 
   //PREVIOUS AND NEXT FUNCTIONS

@@ -4,6 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  background: #ffffff;
 
   @include desktop {
     padding: vw(121) vw(0) vw(0) vw(0);
@@ -29,7 +31,7 @@
       flex-wrap: wrap;
       height: vwm(238);
       position: relative;
-      background: #000;
+      background: url(../images/mapa.jpg);
 
       @include desktop {
         flex: 0 0 50%;
@@ -43,10 +45,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: blue;
-        //   background: url(../images/ebanking1.jpeg);
-        opacity: 0.7;
-        z-index: 1;
+        background: #e60028;
+        opacity: 0.78;
+        z-index: 2;
       }
 
       & h2 {
@@ -83,7 +84,7 @@
 
     #{$this}__online {
       position: relative;
-      background: #000;
+      background: url(../images/mobile/onlineM.jpg);
       flex: 0 0 100%;
       display: flex;
       flex-direction: column;
@@ -91,6 +92,12 @@
       align-items: center;
       flex-wrap: wrap;
       height: vwm(290);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+      @include desktop {
+        background: url(../images/online.jpg);
+      }
 
       @include desktop {
         flex: 0 0 50%;
@@ -104,10 +111,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        //   background: blue;
-        //   background: url(../images/ebanking1.jpeg);
-        opacity: 0.7;
+        background: #000;
+        opacity: 0.68;
         z-index: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
       }
 
       & h2 {
@@ -141,12 +149,69 @@
           margin-top: vw(30);
         }
       }
+
+      #{$this}__returnImage {
+        display: none;
+        transition: 0.3s;
+
+        &:hover {
+          transition: 0.3s;
+
+          @include desktop {
+            box-shadow: 0px 0.2vw 7px gray;
+          }
+        }
+
+        @include desktop {
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          right: vw(87);
+          bottom: vw(-35);
+          height: vw(70);
+          width: vw(70);
+          background: url("../images/return.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          z-index: 2;
+          box-shadow: 0px 0.2vw 4px gray;
+          cursor: pointer;
+        }
+
+        &::before {
+          border-radius: 50%;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: white;
+          opacity: 0.7;
+          z-index: 1;
+        }
+
+        &::after {
+          border-radius: 50%;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../images/icons/General/arrow.svg");
+          opacity: 0.7;
+          z-index: 3;
+          background-size: vw(16) vw(19);
+          background-repeat: no-repeat;
+          background-position: 50%;
+        }
+      }
     }
   }
 
   #{$this}__career {
     position: relative;
-    background: rgb(229, 226, 226);
     flex: 0 0 100%;
     height: vwm(421);
     padding: vwm(119) vwm(31) vwm(82) vwm(31);
@@ -157,20 +222,22 @@
       height: vw(529);
     }
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   //   background: blue;
-    //   //   background: url(../images/ebanking1.jpeg);
-    //   opacity: 0.7;
-    //   z-index: 1;
-    // }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/career.jpg);
+      background-size: 100% 100%;
+      opacity: 0.1;
+      z-index: 1;
+    }
 
     #{$this}__textDiv {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-wrap: wrap;
       flex: 0 0 100%;
@@ -235,6 +302,7 @@
           font-weight: 500;
           height: vw(16);
           color: #e60028;
+          transition: 0.5s;
         }
 
         span {
@@ -243,14 +311,14 @@
         }
 
         &:hover {
-          color: rgb(177, 174, 174);
+          opacity: 0.7;
           transition: 0.5s;
         }
 
         #{$this}__imgDiv {
           width: vwm(20);
           height: vwm(10);
-          background: url("../images/icons/General/redArrow.svg");
+          background: url("../images/icons/General/red.png");
           display: inline-block;
           background-size: contain;
           background-repeat: no-repeat;
@@ -288,6 +356,8 @@
         height: vw(123 + 12 + 15 + 30);
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-content: space-between;
+        width: vw(101 + 186 + 119);
       }
 
       & div {
@@ -300,6 +370,12 @@
       & a {
         letter-spacing: vwm(1);
         display: block;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.3s;
+        }
 
         @include desktop {
           letter-spacing: vw(2);
@@ -311,16 +387,170 @@
   }
 
   #{$this}__social {
-    padding: vwm(46) vwm(31) vwm(80) vwm(0);
+    padding: vwm(46) vwm(30) vwm(33) vwm(0);
     flex: 0 0 100%;
     color: #a6a6a6;
     font-size: vwm(14);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
 
     @include desktop {
+      display: block;
       padding: vw(81 - 30) vw(31) vw(80) vw(0);
       flex: 0 0 100%;
       font-size: vw(15);
       height: vw(12);
+      align-items: unset;
+    }
+
+    #{$this}__socialLinks {
+      width: vwm(116);
+      height: vwm(19);
+      margin-right: vwm(20);
+      display: flex;
+      justify-content: space-between;
+
+      @include desktop {
+        margin-top: vw(20);
+        height: vw(22);
+        width: vw(131);
+        margin-right: unset;
+      }
+
+      #{$this}__socialLink {
+        transition: 0.3s;
+        width: auto;
+        display: inline-block;
+        width: vwm(116 / 4);
+        @include desktop {
+          flex: auto;
+          width: auto;
+          cursor: pointer;
+        }
+
+        &--1 {
+          height: 100%;
+
+          background: url("../images/icons/Nav/2/instagram.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @include desktop {
+            height: 100%;
+            max-width: vw(210);
+          }
+        }
+
+        &--2 {
+          display: flex;
+
+          height: 100%;
+
+          background: url("../images/icons/Nav/2/twitter.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 50%;
+
+          @include desktop {
+            height: 100%;
+            max-width: vw(210);
+          }
+        }
+
+        &--3 {
+          height: 100%;
+
+          background: url("../images/icons/Nav/2/facebook.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 50%;
+
+          @include desktop {
+            height: 100%;
+            max-width: vw(210);
+          }
+        }
+
+        &--4 {
+          background: url("../images/icons/Nav/2/linkedin.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 100% 0;
+          @include desktop {
+            height: 100%;
+            max-width: vw(210);
+          }
+        }
+
+        &:active {
+          transition: 0.3s;
+          opacity: 0.4;
+        }
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    #{$this}__storeLinks {
+      display: flex;
+      justify-content: space-between;
+      width: vwm(318);
+      height: vwm(29);
+      margin-left: vwm(-21);
+      margin-top: vwm(70);
+
+      @include desktop {
+        margin-top: vw(79);
+        margin-left: vw(131);
+        height: vw(34);
+        width: vw(363);
+      }
+
+      #{$this}__storeLink {
+        transition: 0.3s;
+        height: 100%;
+        width: vwm(100);
+
+        @include desktop {
+          width: vw(114);
+        }
+        @include desktop {
+          cursor: pointer;
+        }
+
+        &:active {
+          transition: 0.3s;
+          opacity: 0.4;
+        }
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.3s;
+        }
+
+        &--1 {
+          background: url("../images/store1.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &--2 {
+          background: url("../images/store2.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &--3 {
+          background: url("../images/store3.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
     }
 
     & > :first-child {
@@ -336,18 +566,30 @@
     position: relative;
     flex: 0 0 100%;
     height: vwm(280);
-    background: url("../images/mob1.png");
-    opacity: 0.4;
-    background-size: vwm(209) vwm(427);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    @include transform(translatey(vwm(300)));
-    z-index: -1;
+    overflow: hidden;
+
+    & > div {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/telefon.png");
+      background-size: vwm(209) vwm(427);
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      @include transform(translatey(vwm(300)));
+
+      @include desktop {
+        @include transform(translatey(vw(500)));
+        background-size: vw(238) vw(484);
+        background-position: 0 vw(185);
+      }
+    }
 
     @include desktop {
       flex: 1 0 auto;
       height: vw(529);
-      @include transform(translatey(vw(500)));
     }
   }
 
@@ -381,15 +623,22 @@
         flex-direction: column;
         display: flex;
         justify-content: space-between;
+        min-height: vwm(207);
+        align-content: space-between;
 
         @include desktop {
           flex-direction: row;
           flex: 0 0 vw(1078);
+          min-height: unset;
         }
 
         #{$this}__bottomLink {
           @include desktop {
             height: vw(12);
+          }
+
+          &:hover {
+            opacity: 0.7;
           }
         }
 
@@ -410,17 +659,26 @@
       width: vwm(80);
       display: flex;
       justify-content: space-between;
+      padding-bottom: vwm(42);
 
       @include desktop {
         width: vw(80);
         display: inline-flex;
         font-size: vw(14);
         margin-top: unset;
+        padding-bottom: unset;
+      }
+
+      & span:not(:nth-child(2)) {
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
 
       & span:active:not(:nth-child(2)) {
         color: #e60028;
-
         @include desktop {
           height: vw(14);
           display: inline-flex;

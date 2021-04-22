@@ -6,6 +6,7 @@
   flex: 0 0 100%;
   justify-content: center;
   padding: vwm(32) vwm(32) vwm(32) vwm(32);
+  background: #ffffff;
 
   @include desktop {
     padding: vw(156) vw(0) vw(92) vw(0);
@@ -160,14 +161,14 @@
       }
 
       &:hover {
-        color: rgb(177, 174, 174);
+        opacity: 0.7;
         transition: 0.5s;
       }
 
       #{$this}__imgDiv {
         width: vwm(20);
         height: vwm(10);
-        background: url("../images/icons/General/redArrow.svg");
+        background: url("../images/icons/General/red.png");
         display: inline-block;
         background-size: contain;
         background-repeat: no-repeat;

@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   flex: 0 0 100%;
   justify-content: center;
+  background: #ffffff;
 
   #{$this}__titlesGroup {
     align-content: flex-start;
@@ -112,10 +113,17 @@
     #{$this}__imgDiv {
       background-size: contain;
       background-repeat: no-repeat;
+      transition: 0.5s;
 
       @include desktop {
         box-shadow: 0px 0.1vw 2px gray;
         border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &:hover {
+        box-shadow: 0px 0.1vw 4px gray;
+        transition: 0.5s;
       }
     }
 
@@ -132,12 +140,17 @@
         background: url("../images/icons/Benefits/ben1.svg");
         background-size: contain;
         background-repeat: no-repeat;
-        background-size: 60% 60%;
         background-position: center;
+        background-size: 60% 60%;
 
         @include desktop {
+          background: url("../images/icons/Benefits/ben1.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
           width: vw(127);
           height: vw(127);
+          background-size: vw(75) vw(71);
         }
       }
     }
@@ -159,8 +172,14 @@
         background-position: center;
 
         @include desktop {
+          background: url("../images/icons/Benefits/ben1.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: vw(70) vw(65);
           width: vw(127);
           height: vw(127);
+          background-size: vw(70) vw(65);
         }
       }
     }
@@ -182,6 +201,11 @@
         background-position: center;
 
         @include desktop {
+          background: url("../images/icons/Benefits/ben3.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: vw(74) vw(69);
           width: vw(127);
           height: vw(127);
         }
@@ -197,13 +221,14 @@
       #{$this}__imgDiv {
         width: vwm(37);
         height: vwm(34);
-        background: url("../images/icons/Benefits/ben4.svg");
+        background: url("../images/icons/Benefits/ben4.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-size: 60% 60%;
         background-position: center;
 
         @include desktop {
+          background-size: vw(72) vw(55);
           width: vw(127);
           height: vw(127);
         }
@@ -250,7 +275,7 @@
     #{$this}__arrowImg {
       width: vwm(14);
       height: vwm(10);
-      background: url(../images/icons/General/redArrow.svg);
+      background: url("../images/icons/General/red.png");
       background-size: contain;
       background-repeat: no-repeat;
       margin-left: auto;
@@ -270,14 +295,18 @@
 
     & p {
       flex: 0 100%;
-      font-size: (10vw / 3.75);
+      font-size: (14vw / 3.75);
       font-weight: 400;
-      line-height: ((43vw / 3) / 3.75);
       height: (43vw / 3.75);
       margin-top: (18vw / 3.75);
       max-width: (154vw / 3.75);
       text-align: center;
       display: none;
+      max-height: 100%;
+      min-width: 100%;
+      padding: 10vw 20vw 20vw 20vw;
+      background: rgba(236, 236, 236, 0.582);
+      color: #616060;
 
       @include desktop {
         display: block;
@@ -288,6 +317,10 @@
         flex: 110%;
         min-width: 100%;
         height: unset;
+        padding: unset;
+        min-width: unset;
+        max-height: unset;
+        background: unset;
       }
     }
 
