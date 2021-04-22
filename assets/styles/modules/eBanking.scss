@@ -221,11 +221,12 @@
       line-height: vwm(21);
 
       @include desktop {
-        line-height: vw(24);
+        line-height: vw(23);
         margin-top: vw(29);
         min-width: unset;
         text-align: left;
-        width: (467% / 5.26);
+        width: vw(409);
+        height: vw(110);
         font-size: vw(16);
       }
 
