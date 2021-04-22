@@ -51,7 +51,7 @@
 
       & p {
         @include desktop {
-          max-width: vw(350);
+          max-width: vw(340);
         }
       }
     }
@@ -63,6 +63,12 @@
         margin-top: vw(67);
         flex: 0 0 vw(359);
       }
+
+      & p {
+        @include desktop {
+          max-width: vw(340);
+        }
+      }
     }
 
     &--3 {
@@ -71,6 +77,12 @@
       @include desktop {
         margin-top: vw(67);
         flex: 0 0 vw(361);
+      }
+
+      & p {
+        @include desktop {
+          max-width: vw(340);
+        }
       }
     }
 
@@ -192,8 +204,8 @@
       @include desktop {
         display: block;
         height: vw(136);
-        font-size: vw(19.1);
-        line-height: vw(21);
+        font-size: vw(16);
+        line-height: vw(24);
         color: #686b6e;
         margin-top: vw(40);
       }
