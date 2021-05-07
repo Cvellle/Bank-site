@@ -10,6 +10,10 @@ html {
   }
 
   // REM CALCULATIONS
+  @media only screen and (min-width: #{1025}px) {
+    font-size: ((1025 / $designWidth) * 16px);
+  }
+
   @media only screen and (min-width: #{1080}px) {
     font-size: ((1080 / $designWidth) * 16px);
   }
