@@ -1,14 +1,102 @@
 html {
+  @import url("//db.onlinewebfonts.com/c/9da41c570d5a221cb2486d78769a076d?family=Neue + Helvetica");
   scroll-behavior: smooth;
   max-width: 100%;
+  $designWidth: 1440;
+  $fontRelation: ($designWidth / 100);
 
   @media only screen and (max-width: 1024px) {
     overflow-x: hidden;
   }
+
+  // REM CALCULATIONS
+  @media only screen and (min-width: #{1080}px) {
+    font-size: ((1080 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1125}px) {
+    font-size: ((1125 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1170}px) {
+    font-size: ((1170 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1020}px) {
+    font-size: ((1020 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1242}px) {
+    font-size: ((1242 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1280}px) {
+    font-size: ((1280 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1284}px) {
+    font-size: ((1284 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1366}px) {
+    font-size: ((1366 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1440}px) {
+    font-size: ((1440 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1536}px) {
+    font-size: ((1536 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1600}px) {
+    font-size: ((1600 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1680}px) {
+    font-size: ((1680 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1920}px) {
+    font-size: ((1920 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{1921}px) {
+    font-size: ((1921 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2048}px) {
+    font-size: ((2048 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2160}px) {
+    font-size: ((2160 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2024}px) {
+    font-size: ((2024 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2304}px) {
+    font-size: ((2304 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2360}px) {
+    font-size: ((2360 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2388}px) {
+    font-size: ((2388 / $designWidth) * 16px);
+  }
+
+  @media only screen and (min-width: #{2560}px) {
+    font-size: ((2560 / $designWidth) * 16px);
+  }
 }
 
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 

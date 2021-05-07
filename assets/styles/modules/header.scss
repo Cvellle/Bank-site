@@ -1,5 +1,6 @@
 .header {
   $this: &;
+  $contentWidth: 1440 - 60 - 46;
 
   background: transparent;
   position: sticky;
@@ -35,7 +36,6 @@
     @include desktop {
       height: unset;
       justify-content: flex-start;
-      $contentWidth: 1437 - 59 - 46;
       width: vw($contentWidth);
     }
 
@@ -164,11 +164,13 @@
         height: unset;
         position: relative;
         justify-content: flex-end;
-        width: unset;
+        width: vw($contentWidth - 246 - 71);
+        flex-wrap: nowrap;
         @include transform(translateX(0%));
         padding: 0;
         flex: unset;
         min-width: unset;
+        font-weight: normal;
       }
 
       &--mobileVisible {
@@ -220,7 +222,7 @@
           transition: 0.3s;
           margin-top: 0;
           margin-right: 0;
-          width: unset;
+          width: vw($contentWidth - 246 - 71 - 223 - 114);
           margin-top: vw(57);
         }
       }
@@ -377,6 +379,8 @@
             border-top: none;
             border-left: none;
             width: vw(92);
+            min-width: vw(92);
+            max-width: vw(92);
           }
 
           #{$this}__mobArrow {
@@ -413,24 +417,32 @@
         &--2 {
           @include desktop {
             margin-left: vw(50);
+            min-width: vw(77);
+            max-width: vw(77);
           }
         }
 
         &--3 {
           @include desktop {
             margin-left: vw(40);
+            min-width: vw(60);
+            max-width: vw(60);
           }
         }
 
         &--4 {
           @include desktop {
             margin-left: vw(37);
+            min-width: vw(146);
+            // max-width: vw(146);
           }
         }
 
         &--5 {
           @include desktop {
             margin-left: vw(35);
+            min-width: vw(61);
+            max-width: vw(61);
           }
         }
 
@@ -457,7 +469,7 @@
           justify-content: center;
 
           @include desktop {
-            font-size: vw(16);
+            font-size: vw(15.5);
             line-height: vw(46);
             line-height: vw(0);
             color: #ffffff;
@@ -490,7 +502,7 @@
             border-radius: vw(23);
             background-color: #e50027;
             color: white;
-            font-size: vw(16);
+            font-size: vw(15.5);
             line-height: vw(46);
             color: #ffffff;
             font-weight: bold;
